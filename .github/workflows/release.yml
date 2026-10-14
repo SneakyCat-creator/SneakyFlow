@@ -1,0 +1,120 @@
+name: Release
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Stable release tag matching the project version
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: sneakyflow-release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: windows-latest
+    outputs:
+      tag: ${{ steps.release.outputs.tag }}
+      source: ${{ steps.release.outputs.source }}
+      license: ${{ steps.release.outputs.license }}
+      publish: ${{ steps.release.outputs.publish }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          ref: ${{ inputs.tag || github.ref }}
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        with:
+          dotnet-version: '10.0.400'
+      - name: Validate tag and license version
+        id: release
+        shell: pwsh
+        env:
+          REQUESTED_TAG: ${{ inputs.tag }}
+        run: |
+          [xml]$project = Get-Content SneakyFlow.csproj
+          $version = [string]$project.Project.PropertyGroup.Version
+          $license = [string]$project.Project.PropertyGroup.LicenseVersion
+          $tag = $env:GITHUB_REF_NAME
+          if ($env:GITHUB_REF_TYPE -ne 'tag') {
+            $tag = if ($env:REQUESTED_TAG) { $env:REQUESTED_TAG } else { "v$version" }
+          }
+          if ($tag -cne "v$version" -or $version -notmatch '^\d+\.\d+\.\d+$') { throw 'Tag must match project version exactly.' }
+          if (-not (Select-String -LiteralPath 'Services/ProductState.cs' -SimpleMatch "`"$license`"")) { throw 'License versions differ.' }
+          if ((Get-Content LICENSE-SneakyFlow.txt -First 1) -cne "License version: $license") { throw 'License document version differs.' }
+          "tag=$tag" >> $env:GITHUB_OUTPUT
+          $source = git rev-parse HEAD
+          $tagSource = git rev-parse --verify "refs/tags/$tag^{commit}" 2>$null
+          $tagExists = $LASTEXITCODE -eq 0
+          if ($env:GITHUB_REF_TYPE -eq 'tag' -or $env:REQUESTED_TAG) {
+            if (-not $tagExists -or $tagSource -ne $source) { throw 'Build must use the exact release tag.' }
+          }
+          # A main push publishes only a new version. Existing tags are never moved.
+          "publish=$((-not $tagExists -or $tagSource -eq $source).ToString().ToLowerInvariant())" >> $env:GITHUB_OUTPUT
+          $global:LASTEXITCODE = 0
+          "source=$source" >> $env:GITHUB_OUTPUT
+          "license=$license" >> $env:GITHUB_OUTPUT
+          $emails = git log --all --format='%ae%n%ce'
+          if ($LASTEXITCODE -or ($emails | Where-Object { $_ -notmatch '@users\.noreply\.github\.com$' })) { throw 'History contains an unprotected author email. Release stopped.' }
+      - name: Restore locked dependencies
+        shell: pwsh
+        run: |
+          dotnet restore SneakyFlow.csproj --locked-mode
+          if ($LASTEXITCODE) { throw 'Restore failed' }
+          dotnet restore tests/SneakyFlow.Smoke/SneakyFlow.Smoke.csproj --locked-mode
+          if ($LASTEXITCODE) { throw 'Transfer fixture restore failed' }
+          dotnet restore tests/SneakyFlow.UiSmoke/SneakyFlow.UiSmoke.csproj
+          if ($LASTEXITCODE) { throw 'UI fixture restore failed' }
+      - name: Build and test sources
+        shell: pwsh
+        run: |
+          dotnet build SneakyFlow.csproj -c Release --no-restore
+          if ($LASTEXITCODE) { throw 'Build failed' }
+          dotnet run --project tests/SneakyFlow.Smoke -c Release --no-restore
+          if ($LASTEXITCODE) { throw 'Transfer tests failed' }
+          dotnet run --project tests/SneakyFlow.UiSmoke -c Release --no-restore -- artifacts/ui-ci --headless-caption
+          if ($LASTEXITCODE) { throw 'UI tests failed' }
+          dotnet build tests/RemovalFixture -c Release
+          if ($LASTEXITCODE) { throw 'Removal fixture build failed' }
+          ./tests/Test-SelfRemoval.ps1
+          if ($LASTEXITCODE) { throw 'Self-removal test failed' }
+      - name: Package single EXE
+        if: steps.release.outputs.publish == 'true'
+        shell: pwsh
+        env:
+          RELEASE_TAG: ${{ steps.release.outputs.tag }}
+        run: ./tools/Release.ps1 -Tag $env:RELEASE_TAG
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: steps.release.outputs.publish == 'true'
+        with:
+          name: official-release
+          path: artifacts/release/SneakyFlow.exe
+          if-no-files-found: error
+  publish:
+    needs: build
+    if: needs.build.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: official-release
+          path: release
+      - name: Publish tagged release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ needs.build.outputs.tag }}
+          RELEASE_SOURCE: ${{ needs.build.outputs.source }}
+          LICENSE_VERSION: ${{ needs.build.outputs.license }}
+        run: |
+          sha=$(sha256sum release/SneakyFlow.exe | cut -d ' ' -f 1)
+          printf 'SHA-256 (`SneakyFlow.exe`): `%s`\n\nLicense: `%s`.\n' "$sha" "$LICENSE_VERSION" > release-notes.md
+          # GitHub creates the tag at the exact tested commit when it does not exist yet.
+          gh release create "$RELEASE_TAG" release/SneakyFlow.exe --target "$RELEASE_SOURCE" --title "$RELEASE_TAG" --notes-file release-notes.md

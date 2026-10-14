@@ -1,0 +1,147 @@
+<Window x:Class="SneakyFlow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+        xmlns:ui="clr-namespace:SneakyFlow.UI"
+        Style="{StaticResource AppWindowStyle}" Background="Transparent"
+        Title="SneakyFlow" Width="1280" Height="890" MinWidth="1120" MinHeight="780"
+        WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" AllowDrop="True"
+        Drop="Window_Drop" DragOver="Window_DragOver">
+  <shell:WindowChrome.WindowChrome><shell:WindowChrome CaptionHeight="60" CornerRadius="0" GlassFrameThickness="0,60,0,0" ResizeBorderThickness="6" UseAeroCaptionButtons="True"/></shell:WindowChrome.WindowChrome>
+  <Window.Resources>
+    <ui:ByteSizeConverter x:Key="Bytes"/><ui:SpeedConverter x:Key="Speed"/><ui:SpeedNumberConverter x:Key="SpeedNumber"/>
+    <Style x:Key="MetricLabel" TargetType="TextBlock" BasedOn="{StaticResource MutedText}"><Setter Property="FontSize" Value="11"/><Setter Property="Margin" Value="0,0,0,3"/></Style><Style x:Key="MetricValue" TargetType="TextBlock"><Setter Property="FontSize" Value="12"/><Setter Property="Margin" Value="0,0,0,10"/><Setter Property="TextTrimming" Value="CharacterEllipsis"/></Style>
+  </Window.Resources>
+  <Border BorderBrush="#29374A" BorderThickness="1">
+    <Grid><Grid.RowDefinitions><RowDefinition Height="60"/><RowDefinition Height="*"/><RowDefinition Height="38"/></Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+          <Border Background="{StaticResource CanvasBrush}" Margin="0,0,150,0"/>
+          <Border Background="{StaticResource CanvasBrush}" Height="24" VerticalAlignment="Bottom"/>
+          <StackPanel x:Name="Brand" Orientation="Horizontal" VerticalAlignment="Top" Margin="16,16,150,0">
+            <Border Background="#203C34" CornerRadius="7" Width="29" Height="29" Margin="0,0,9,0" VerticalAlignment="Center">
+              <Viewbox Width="29" Height="29"><Canvas Width="24" Height="24">
+                <Path Data="M5 4 L9 7 C11 6.2 13 6.2 15 7 L19 4 L19 12 C19 16.5 16 19.5 12 19.5 C8 19.5 5 16.5 5 12 Z" Fill="{StaticResource AccentBrush}"/>
+              </Canvas></Viewbox>
+            </Border>
+            <TextBlock VerticalAlignment="Center" FontSize="21" FontWeight="SemiBold"><Run Text="sneaky" Foreground="{StaticResource TextBrush}"/><Run Text="flow" Foreground="{StaticResource AccentBrush}"/></TextBlock>
+          </StackPanel>
+        </Grid>
+        <Border Grid.Row="1" Background="{StaticResource CanvasBrush}"/>
+        <Grid x:Name="ContentGrid" Grid.Row="1" Margin="16,4,16,8" SizeChanged="ContentGrid_SizeChanged"><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*" MinHeight="126"/><RowDefinition x:Name="SplitterRow" Height="10"/><RowDefinition x:Name="DetailsRow" Height="340" MinHeight="240"/></Grid.RowDefinitions>
+          <Grid><StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center"><Button x:Name="AddButton" Content="{ui:Loc s97d02f8d1251}" Style="{StaticResource PrimaryButton}" Click="Add_Click" Margin="0,0,8,0"/><Button Content="{ui:Loc s1785c5476e30}" Click="OpenTorrent_Click"/></StackPanel></Grid>
+          <UniformGrid Grid.Row="1" Columns="4" Margin="0,12,0,10">
+            <Border Background="{StaticResource PanelBrush}" BorderBrush="#253346" BorderThickness="1" CornerRadius="10" Padding="14,12" Margin="0,0,8,0"><Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+              <TextBlock Text="{ui:Loc sf9174ab335a1}" FontSize="10" Foreground="{StaticResource MutedBrush}"/>
+              <Grid Grid.Row="1" Margin="0,8,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="DownloadRate" Text="—" FontSize="23" FontWeight="SemiBold" Typography.NumeralAlignment="Tabular" TextTrimming="CharacterEllipsis"/>
+                <TextBlock x:Name="DownloadUnit" Grid.Column="1" FontSize="12" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Bottom" Margin="10,0,0,3"/>
+              </Grid>
+            </Grid></Border>
+            <Border Background="{StaticResource PanelBrush}" BorderBrush="#253346" BorderThickness="1" CornerRadius="10" Padding="14,12" Margin="0,0,8,0"><Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+              <TextBlock Text="{ui:Loc sd609ed6a3304}" FontSize="10" Foreground="{StaticResource MutedBrush}"/>
+              <Grid Grid.Row="1" Margin="0,8,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="UploadRate" Text="—" FontSize="23" FontWeight="SemiBold" Typography.NumeralAlignment="Tabular" TextTrimming="CharacterEllipsis"/>
+                <TextBlock x:Name="UploadUnit" Grid.Column="1" FontSize="12" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Bottom" Margin="10,0,0,3"/>
+              </Grid>
+            </Grid></Border>
+            <Border Background="{StaticResource PanelBrush}" BorderBrush="#253346" BorderThickness="1" CornerRadius="10" Padding="14,12" Margin="0,0,8,0"><Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+              <TextBlock Text="{ui:Loc sb73b07922795}" FontSize="10" Foreground="{StaticResource MutedBrush}"/>
+              <Grid Grid.Row="1" Margin="0,8,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="SelectedSize" Text="—" FontSize="23" FontWeight="SemiBold" Typography.NumeralAlignment="Tabular" TextTrimming="CharacterEllipsis"/>
+                <TextBlock x:Name="SelectedSizeUnit" Grid.Column="1" FontSize="12" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Bottom" Margin="10,0,0,3"/>
+              </Grid>
+              <TextBlock x:Name="SelectedSizeTorrent" Grid.Row="2" Text="{ui:Loc s8c70ea57ed7d}" FontSize="10" TextTrimming="CharacterEllipsis" Foreground="{StaticResource MutedBrush}" Margin="0,5,0,0"/>
+            </Grid></Border>
+            <Border Background="{StaticResource PanelBrush}" BorderBrush="#253346" BorderThickness="1" CornerRadius="10" Padding="14,12" Margin="0,0,0,0"><Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+              <TextBlock Text="{ui:Loc s6f3f71f1c0c9}" FontSize="10" Foreground="{StaticResource MutedBrush}"/>
+              <Grid Grid.Row="1" Margin="0,8,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock x:Name="RemainingTime" Text="—" FontSize="23" FontWeight="SemiBold" Typography.NumeralAlignment="Tabular" TextTrimming="CharacterEllipsis"/><TextBlock x:Name="RemainingTimeUnit" Grid.Column="1" FontSize="10" Foreground="{StaticResource MutedBrush}" VerticalAlignment="Bottom" Margin="8,0,0,3"/>
+              </Grid>
+              <TextBlock x:Name="RemainingTorrent" Grid.Row="2" Text="{ui:Loc s8c70ea57ed7d}" FontSize="10" TextTrimming="CharacterEllipsis" Foreground="{StaticResource MutedBrush}" Margin="0,5,0,0"/>
+            </Grid></Border>
+          </UniformGrid>
+          <Grid Grid.Row="2" Margin="0,0,0,8"><StackPanel Orientation="Horizontal" HorizontalAlignment="Left"><Button x:Name="PauseButton" Content="{ui:Loc s2a5774f51267}" Padding="11,8" Style="{StaticResource QuietButton}" Click="Pause_Click" IsEnabled="False"/><Button x:Name="FolderButton" Content="{ui:Loc s54724fec4ffc}" Padding="11,8" Style="{StaticResource QuietButton}" Click="Folder_Click" IsEnabled="False"/><Button x:Name="RemoveButton" Content="{ui:Loc s86ea33aef5e9}" Padding="11,8" Style="{StaticResource QuietButton}" Click="Remove_Click" IsEnabled="False" ToolTip="{ui:Loc s71171f1c6592}"/></StackPanel></Grid>
+          <Grid Grid.Row="4" MinHeight="126">
+            <ListBox x:Name="TorrentList" Background="Transparent" BorderThickness="0" SelectionChanged="TorrentList_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" Padding="0" VirtualizingPanel.IsVirtualizing="True" VirtualizingPanel.VirtualizationMode="Recycling">
+              <ListBox.Template><ControlTemplate TargetType="ListBox"><Border Background="{TemplateBinding Background}"><ScrollViewer Focusable="False" Padding="{TemplateBinding Padding}"><ItemsPresenter/></ScrollViewer></Border></ControlTemplate></ListBox.Template><ListBox.ItemTemplate><DataTemplate><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="120"/><ColumnDefinition Width="120"/><ColumnDefinition Width="100"/></Grid.ColumnDefinitions>
+                <StackPanel Margin="0,0,25,0"><TextBlock Text="{Binding Name}" FontSize="13" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip="{Binding Name}"/><Grid Margin="0,8,0,0"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBlock Text="{Binding Status}" FontSize="10" Foreground="{StaticResource MutedBrush}" TextTrimming="CharacterEllipsis"/><TextBlock Grid.Column="1" Text="{Binding Progress, StringFormat={}{0:0.0}%}" FontSize="10" Foreground="{StaticResource AccentBrush}"/></Grid><ui:PieceMapControl Pieces="{Binding PieceMap, Mode=OneWay}" Height="7" Margin="0,8,0,0" ToolTipService.ShowDuration="20000"/><TextBlock Text="{Binding Diagnosis}" FontSize="10" Foreground="{StaticResource MutedBrush}" TextTrimming="CharacterEllipsis" ToolTip="{Binding Diagnosis}" Margin="0,5,0,0"/></StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0" ToolTip="{ui:Loc s95189b583cdb}">
+                  <TextBlock Text="↓" Foreground="{StaticResource AccentBrush}" Margin="0,0,6,0"/>
+                  <TextBlock x:Name="RowDownload" Text="{Binding DownloadSpeed, Converter={StaticResource Speed}}" FontSize="12" Typography.NumeralAlignment="Tabular"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,20,0" ToolTip="{ui:Loc saf1aef4878b9}">
+                  <TextBlock Text="↑" Foreground="#A6B8CB" Margin="0,0,6,0"/>
+                  <TextBlock Text="{Binding UploadSpeed, Converter={StaticResource Speed}}" FontSize="12" Typography.NumeralAlignment="Tabular"/>
+                </StackPanel>
+                <StackPanel Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" ToolTip="{ui:Loc sf01ee519129a}">
+                  <TextBlock x:Name="RowPeers" FontSize="12" Typography.NumeralAlignment="Tabular" HorizontalAlignment="Right"><Run Text="{Binding ConnectedSeeds, Mode=OneWay}"/><Run Text=" / " Foreground="{StaticResource MutedBrush}"/><Run Text="{Binding ConnectedLeechers, Mode=OneWay}"/></TextBlock>
+                  <TextBlock Text="{ui:Loc RowSeedsPeers}" FontSize="10" Foreground="{StaticResource MutedBrush}" Margin="0,5,0,0"/>
+                </StackPanel>
+              </Grid></DataTemplate></ListBox.ItemTemplate>
+            </ListBox>
+            <Border x:Name="EmptyState" Background="#131D2A" BorderBrush="#293B4D" BorderThickness="1" CornerRadius="12" Margin="0,1,0,8"><StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25"><Border Background="#203A37" CornerRadius="15" Width="58" Height="58" HorizontalAlignment="Center"><TextBlock Text="↓" FontSize="35" Foreground="{StaticResource AccentBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-3,0,0"/></Border><TextBlock x:Name="EmptyTitle" Text="{ui:Loc scdf4012ec1dd}" FontSize="19" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,18,0,0"/><TextBlock x:Name="EmptyDescription" Text="{ui:Loc sb35dc252696a}" Foreground="{StaticResource MutedBrush}" FontSize="12" TextWrapping="Wrap" TextAlignment="Center" Margin="0,9,0,0"/><Button x:Name="EmptyAddButton" Content="{ui:Loc s97d02f8d1251}" Click="Add_Click" Style="{StaticResource PrimaryButton}" HorizontalAlignment="Center" Margin="0,21,0,0"/></StackPanel></Border>
+          </Grid>
+          <GridSplitter x:Name="DetailsSplitter" Grid.Row="5" Height="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ResizeDirection="Rows" ResizeBehavior="PreviousAndNext" Background="Transparent" Cursor="SizeNS" DragCompleted="DetailsSplitter_DragCompleted"><GridSplitter.Template><ControlTemplate TargetType="GridSplitter"><Grid Background="Transparent"><Border Width="64" Height="3" CornerRadius="2" Background="{StaticResource StrokeBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/></Grid></ControlTemplate></GridSplitter.Template></GridSplitter><Border x:Name="DetailsPanel" Grid.Row="6" Background="{StaticResource PanelBrush}" BorderBrush="{StaticResource StrokeBrush}" BorderThickness="1" CornerRadius="10" Padding="12,10" Margin="0,6,0,0" Visibility="Collapsed">
+            <Grid><Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+              <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                <StackPanel Margin="0,0,14,0"><TextBlock Text="{ui:Loc sa2d2c4050a64}" Foreground="{StaticResource MutedBrush}" FontSize="10" FontWeight="SemiBold"/><TextBlock Text="{Binding Name}" FontSize="14" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip="{Binding Name}" Margin="0,4,0,0"/></StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center"><Button x:Name="RetryButton" Content="{ui:Loc s03adbaec7cd9}" Click="Retry_Click" Padding="11,7" FontSize="11" ToolTip="{ui:Loc sdb98fcea1b20}"/><Button Content="{ui:Loc sb838a7f56822}" Click="CopyDiagnostics_Click" Padding="11,7" FontSize="11" Style="{StaticResource QuietButton}" Margin="6,0,0,0"/></StackPanel>
+              </Grid>
+              <Border Grid.Row="1" Background="#25332F" BorderBrush="#3E5148" BorderThickness="1" CornerRadius="6" Padding="10,8" Margin="0,11,0,10"><TextBlock Text="{Binding Diagnosis}" Foreground="#C1C5B2" FontSize="12" TextWrapping="Wrap" LineHeight="18"/></Border>
+              <StackPanel Grid.Row="2" Margin="0,0,0,10">
+                <Grid Margin="0,0,0,5"><TextBlock FontSize="10" Foreground="{StaticResource MutedBrush}"><Run Text="{ui:Loc s5166becd4fcd}"/><Run Text="{Binding CompletedPieces, Mode=OneWay}"/><Run Text=" / "/><Run Text="{Binding PieceCount, Mode=OneWay}"/></TextBlock><TextBlock HorizontalAlignment="Right" Text="{Binding Progress, Mode=OneWay, StringFormat={}{0:0.00}%}" Foreground="{StaticResource AccentBrush}" FontSize="11"/></Grid>
+                <ui:PieceMapControl Pieces="{Binding PieceMap, Mode=OneWay}" Height="15" ToolTipService.ShowDuration="20000"/>
+                <Grid Margin="0,5,0,0"><StackPanel Orientation="Horizontal"><TextBlock Text="{ui:Loc sd733b97d58af}" Foreground="{StaticResource AccentBrush}" FontSize="10"/><TextBlock Text="{ui:Loc sab55c04c02d0}" Foreground="#568C7B" FontSize="10" Margin="13,0,0,0"/><TextBlock Text="{ui:Loc sac92e4923c87}" Foreground="{StaticResource MutedBrush}" FontSize="10" Margin="13,0,0,0"/></StackPanel><TextBlock HorizontalAlignment="Right" FontSize="10" Foreground="{StaticResource MutedBrush}"><Run Text="{ui:Loc s655a4f19fddc}"/><Run Text="{Binding RequestedBlocks, Mode=OneWay}"/></TextBlock></Grid>
+              </StackPanel>
+              <TabControl x:Name="DetailsTabs" Grid.Row="3" Tag="False">
+                <TabControl.Template><ControlTemplate TargetType="TabControl"><Grid>
+                  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+                  <TabPanel x:Name="Headers" IsItemsHost="True" Margin="0,0,0,8"/>
+                  <ContentPresenter x:Name="PART_SelectedContentHost" Grid.Row="1" ContentSource="SelectedContent"/>
+                </Grid><ControlTemplate.Triggers><Trigger Property="Tag" Value="False"><Setter TargetName="Headers" Property="Visibility" Value="Collapsed"/></Trigger></ControlTemplate.Triggers></ControlTemplate></TabControl.Template>
+                <TabItem Header="{ui:Loc s39c63872060e}"><ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><StackPanel Margin="0,1,10,0">
+                  <Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions>
+                    <StackPanel Margin="0,0,12,0">
+                      <TextBlock Text="{ui:Loc s4f41ba24bff4}" Style="{StaticResource MetricLabel}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding Downloaded, Converter={StaticResource Bytes}, Mode=OneWay}"/><Run Text=" / "/><Run Text="{Binding Size, Converter={StaticResource Bytes}, Mode=OneWay}"/></TextBlock>
+                      <TextBlock Text="{ui:Loc s95189b583cdb}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding DownloadSpeed, Converter={StaticResource Speed}}" Style="{StaticResource MetricValue}" Foreground="{StaticResource AccentBrush}"/>
+                      <TextBlock Text="{ui:Loc se2b175a0a171}" Style="{StaticResource MetricLabel}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding Remaining, Converter={StaticResource Bytes}, Mode=OneWay}"/><Run Text=" · "/><Run Text="{Binding EtaText, Mode=OneWay}"/></TextBlock>
+                      <TextBlock Text="{ui:Loc s6f0a34fc733e}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding AddedAt, StringFormat={}{0:dd.MM.yyyy HH:mm}}" Style="{StaticResource MetricValue}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1" Margin="0,0,12,0">
+                      <TextBlock Text="{ui:Loc sa9c649d0b93a}" Style="{StaticResource MetricLabel}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding Uploaded, Converter={StaticResource Bytes}, Mode=OneWay}"/><Run Text=" / "/><Run Text="{Binding Ratio, StringFormat={}{0:0.00}, Mode=OneWay}"/></TextBlock>
+                      <TextBlock Text="{ui:Loc saf1aef4878b9}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding UploadSpeed, Converter={StaticResource Speed}}" Style="{StaticResource MetricValue}"/>
+                      <TextBlock Text="{ui:Loc sc41c371df392}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding ElapsedText}" Style="{StaticResource MetricValue}"/>
+                      <TextBlock Text="{ui:Loc s405cf854f8a3}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding LastActivity}" Style="{StaticResource MetricValue}" ToolTip="{Binding LastActivity}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Margin="0,0,12,0">
+                      <TextBlock Text="{ui:Loc s8f9794c7146b}" Style="{StaticResource MetricLabel}" ToolTip="{ui:Loc s3346f31786c1}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding ConnectedSeeds, Mode=OneWay}"/><Run Text=" / "/><Run Text="{Binding TrackerSeeds, Mode=OneWay, TargetNullValue=—}"/></TextBlock>
+                      <TextBlock Text="{ui:Loc sc6b285990bc1}" Style="{StaticResource MetricLabel}" ToolTip="{ui:Loc s4e77701441c7}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding ConnectedLeechers, Mode=OneWay}"/><Run Text=" / "/><Run Text="{Binding TrackerLeechers, Mode=OneWay, TargetNullValue=—}"/></TextBlock>
+                      <TextBlock Text="{ui:Loc s9fc81cccc4a4}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding KnownPeers}" Style="{StaticResource MetricValue}" ToolTip="{ui:Loc s09d9204a1174}"/>
+                      <TextBlock Text="{ui:Loc s96540c9366e4}" Style="{StaticResource MetricLabel}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding DownloadingPeers, Mode=OneWay}"/><Run Text=" / "/><Run Text="{Binding ChokingPeers, Mode=OneWay}"/></TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Column="3">
+                      <TextBlock Text="{ui:Loc s881eb4857664}" Style="{StaticResource MetricLabel}"/><TextBlock Style="{StaticResource MetricValue}"><Run Text="{Binding AvailablePieces, Mode=OneWay, TargetNullValue=—}"/><Run Text=" / "/><Run Text="{Binding PieceCount, Mode=OneWay}"/></TextBlock>
+                      <TextBlock Text="DHT" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding DhtStatus}" ToolTip="{Binding DhtStatus}" Style="{StaticResource MetricValue}"/>
+                      <TextBlock Text="{ui:Loc sb8b6a8296812}" Style="{StaticResource MetricLabel}"/><TextBlock Text="{Binding HashFailures}" Style="{StaticResource MetricValue}"/>
+                      <TextBlock Text="{ui:Loc s3cb13e858953}" Style="{StaticResource MetricLabel}"/><TextBlock x:Name="DownloadOrderText" Style="{StaticResource MetricValue}"/>
+                    </StackPanel>
+                  </Grid>
+                  <TextBlock Text="{Binding ConnectionSummary}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,2,0,7"/>
+                  <TextBlock Text="{Binding NetworkStatus}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,0,0,7"/>
+                  <TextBlock Text="{Binding DiskStatus}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,0,0,7"/><TextBlock Text="{Binding TransferStatus}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,0,0,7"/><TextBlock Text="{Binding StreamingStatus}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,0,0,7"/>
+                  <TextBlock Text="{ui:Loc sd0554145726f}" Style="{StaticResource MetricLabel}"/><TextBox Text="{Binding SavePath, Mode=OneWay}" IsReadOnly="True" BorderThickness="0" Padding="0,2,0,7" Background="Transparent" FontSize="11"/>
+                  <TextBlock Text="{ui:Loc s15c28af73224}" Style="{StaticResource MetricLabel}"/><TextBox Text="{Binding InfoHash, Mode=OneWay}" IsReadOnly="True" BorderThickness="0" Padding="0,2,0,5" Background="Transparent" FontFamily="Consolas" FontSize="11"/>
+                </StackPanel></ScrollViewer></TabItem>
+                <TabItem x:Name="PeersTab" Header="{ui:Loc s978f0033be4e}" Visibility="Collapsed"><ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"><StackPanel><TextBlock Text="{ui:Loc s38c332f0bd34}" FontSize="11" Foreground="{StaticResource MutedBrush}" Margin="0,4,0,10"/><Grid Margin="0,0,0,6"><Grid.ColumnDefinitions><ColumnDefinition Width="190"/><ColumnDefinition Width="145"/><ColumnDefinition Width="50"/><ColumnDefinition Width="230"/><ColumnDefinition Width="100"/><ColumnDefinition Width="100"/><ColumnDefinition Width="70"/></Grid.ColumnDefinitions><TextBlock Text="{ui:Loc s8db46ea789a5}"/><TextBlock Grid.Column="1" Text="{ui:Loc s190a9bec3866}"/><TextBlock Grid.Column="2" Text="{ui:Loc sd25691ca401e}"/><TextBlock Grid.Column="3" Text="{ui:Loc s81e4bb361c4a}"/><TextBlock Grid.Column="4" Text="{ui:Loc sc98fa825d60a}"/><TextBlock Grid.Column="5" Text="{ui:Loc s62e8deb1de82}"/><TextBlock Grid.Column="6" Text="{ui:Loc s76dd8ec92a26}"/></Grid><ItemsControl ItemsSource="{Binding PeerDetails}"><ItemsControl.ItemTemplate><DataTemplate><Grid Margin="0,5"><Grid.ColumnDefinitions><ColumnDefinition Width="190"/><ColumnDefinition Width="145"/><ColumnDefinition Width="50"/><ColumnDefinition Width="230"/><ColumnDefinition Width="100"/><ColumnDefinition Width="100"/><ColumnDefinition Width="70"/></Grid.ColumnDefinitions><TextBlock Text="{Binding Endpoint}" FontSize="11" TextTrimming="CharacterEllipsis" ToolTip="{Binding Endpoint}"/><TextBlock Grid.Column="1" Text="{Binding Client}" FontSize="11" TextTrimming="CharacterEllipsis" ToolTip="{Binding Client}"/><TextBlock Grid.Column="2" Text="{Binding Role}" FontSize="11"/><TextBlock Grid.Column="3" Text="{Binding Status}" FontSize="11"/><TextBlock Grid.Column="4" Text="{Binding DownloadSpeed, Converter={StaticResource Speed}}" FontSize="11"/><TextBlock Grid.Column="5" Text="{Binding UploadSpeed, Converter={StaticResource Speed}}" FontSize="11"/><TextBlock Grid.Column="6" Text="{Binding OutstandingRequests}" FontSize="11"/></Grid></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></StackPanel></ScrollViewer></TabItem>
+<TabItem x:Name="TrackersTab" Header="{ui:Loc sb767bdde6b10}" Visibility="Collapsed"><ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><StackPanel Margin="0,0,8,0">
+                  <TextBlock Text="{Binding TrackerSummary}" FontSize="11" Foreground="{StaticResource MutedBrush}" TextWrapping="Wrap" Margin="0,1,0,9"/>
+                  <ItemsControl ItemsSource="{Binding Trackers}"><ItemsControl.ItemTemplate><DataTemplate><Border BorderBrush="{StaticResource StrokeBrush}" BorderThickness="0,0,0,1" Padding="0,8"><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="170"/></Grid.ColumnDefinitions>
+                    <StackPanel Margin="0,0,12,0"><TextBlock Text="{Binding Address}" FontSize="11" TextTrimming="CharacterEllipsis" ToolTip="{Binding Address}"/><TextBlock Text="{Binding Message}" FontSize="11" Foreground="{StaticResource MutedBrush}" TextWrapping="Wrap" Margin="0,4,0,0"/></StackPanel>
+                    <StackPanel Grid.Column="1"><TextBlock Text="{Binding Status}" FontSize="11" Foreground="{StaticResource AccentBrush}"/><TextBlock FontSize="10" Foreground="{StaticResource MutedBrush}" Margin="0,4,0,0"><Run Text="{ui:Loc sf439b06af4ef}"/><Run Text="{Binding LastAnnounce, Mode=OneWay}"/></TextBlock><TextBlock FontSize="10" Foreground="{StaticResource MutedBrush}"><Run Text="{ui:Loc s3da35b706ff9}"/><Run Text="{Binding NextAnnounce, Mode=OneWay}"/></TextBlock></StackPanel>
+                  </Grid></Border></DataTemplate></ItemsControl.ItemTemplate></ItemsControl>
+                </StackPanel></ScrollViewer></TabItem>
+                <TabItem x:Name="JournalTab" Header="{ui:Loc s67ade741ae18}" Visibility="Collapsed"><ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"><ItemsControl ItemsSource="{Binding Events}" Margin="0,0,8,0"><ItemsControl.ItemTemplate><DataTemplate><Grid Margin="0,4"><Grid.ColumnDefinitions><ColumnDefinition Width="68"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions><TextBlock Text="{Binding TimeText}" FontSize="11" Foreground="{StaticResource MutedBrush}"/><TextBlock Grid.Column="1" Text="{Binding Message}" FontSize="11" TextWrapping="Wrap"/></Grid></DataTemplate></ItemsControl.ItemTemplate></ItemsControl></ScrollViewer></TabItem>
+              </TabControl>
+            </Grid>
+          </Border>
+        </Grid>
+        <Border Grid.Row="2" Background="#0F1722" BorderBrush="#243245" BorderThickness="0,1,0,0" Padding="16,0"><Grid><Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><Ellipse x:Name="StatusDot" Width="5" Height="5" Fill="{StaticResource AccentBrush}" Margin="0,0,8,0"/><TextBlock x:Name="StatusText" Grid.Column="1" Text="{ui:Loc s4b26b02d56a4}" FontSize="10" Foreground="#8194A9" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/><StackPanel Grid.Column="2" Orientation="Horizontal"><Button Content="{ui:Loc sea9d35e7fe87}" Click="Settings_Click" Style="{StaticResource QuietButton}" Padding="9,3" FontSize="11"/><Button Content="{ui:Loc About}" Click="About_Click" Style="{StaticResource QuietButton}" Padding="9,3" FontSize="11"/><Button x:Name="PortableLabel" Content="{ui:Loc s9b8f6059340b}" Click="ProfileFolder_Click" Style="{StaticResource QuietButton}" Padding="9,3" FontSize="11" ToolTip="{ui:Loc s5969f8188593}"/></StackPanel></Grid></Border>
+    </Grid>
+  </Border>
+</Window>

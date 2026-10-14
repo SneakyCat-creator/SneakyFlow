@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoTorrent" Version="3.0.3-alpha.unstable.rev0049" />
+    <Compile Include="..\..\Models\*.cs" Link="App\Models\%(Filename)%(Extension)" />
+    <Compile Include="..\..\Services\TorrentService.cs" Link="App\Services\TorrentService.cs" />
+    <Compile Include="..\..\Services\AppStorage.cs" Link="App\Services\AppStorage.cs" />
+    <Compile Include="..\..\Services\DiagnosticLog.cs" Link="App\Services\DiagnosticLog.cs" />
+    <Compile Include="..\..\Services\ShutdownPortForwarder.cs" Link="App\Services\ShutdownPortForwarder.cs" />
+    <Compile Include="..\..\Localization\L.cs" Link="App\Localization\L.cs" />
+    <EmbeddedResource Include="..\..\Localization\Strings.json" LogicalName="SneakyFlow.Strings.json" />
+    <Compile Include="..\..\Services\DhtBootstrap.cs" Link="App\Services\DhtBootstrap.cs" />
+  </ItemGroup>
+  <ItemGroup><Compile Include="..\..\Services\SwitchingPieceRequester.cs" Link="App\Services\SwitchingPieceRequester.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="..\..\Services\StallRecovery.cs" Link="App\Services\StallRecovery.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="..\..\Services\DownloadDeletion.cs" Link="App\Services\DownloadDeletion.cs" /></ItemGroup>
+</Project>

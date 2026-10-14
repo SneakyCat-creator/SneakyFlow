@@ -1,0 +1,72 @@
+<Window x:Class="SneakyFlow.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:ui="clr-namespace:SneakyFlow.UI" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Style="{StaticResource AppWindowStyle}"
+        Title="{ui:Loc s5aef72f899ca}" Width="690" Height="790"
+        MinWidth="620" MinHeight="580" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+  <Grid Margin="22">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <TextBlock Text="{ui:Loc s7f17c7c62a7f}" FontSize="25" FontWeight="SemiBold" Margin="0,0,0,16"/>
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+      <StackPanel Margin="0,0,12,4">
+        <StackPanel x:Name="SettingsFields">
+        <TextBlock Text="{ui:Loc se580c2de50a3}" Foreground="{StaticResource AccentBrush}" FontSize="10" FontWeight="SemiBold" Margin="0,0,0,13"/>
+        <TextBlock Text="{ui:Loc s53aeedb2ec9a}" Style="{StaticResource FieldLabel}"/>
+        <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions><TextBox x:Name="DownloadDirectoryBox" ToolTip="{ui:Loc s2aa9ee6d1fea}"/><Button Grid.Column="1" Content="{ui:Loc s6279ddde818c}" Click="BrowseFolder_Click" Margin="8,0,0,0" Padding="13,8"/></Grid>
+        <TextBlock Text="{ui:Loc s0d96cadb9587}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,6,0,14"/>
+        <Border Background="#22332E" BorderBrush="#3C5148" BorderThickness="1" CornerRadius="8" Padding="13,10" Margin="0,0,0,9"><StackPanel>
+          <CheckBox x:Name="SequentialDefaultBox" Content="{ui:Loc s770eb66a4244}" FontWeight="SemiBold" Margin="0,2,0,8"/>
+          <TextBlock Text="{ui:Loc s213edcab876b}" FontSize="11" Foreground="{StaticResource MutedBrush}" TextWrapping="Wrap" LineHeight="18" Margin="30,0,0,1"/>
+        </StackPanel></Border>
+        <CheckBox x:Name="StartAddedBox" Content="{ui:Loc s89774e4cbe6f}" Margin="0,5,0,16"/>
+        <Grid Margin="0,0,0,16"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions>
+          <StackPanel Margin="0,0,9,0"><TextBlock Text="{ui:Loc scb9ad6e126c5}" Style="{StaticResource FieldLabel}"/><TextBox x:Name="MaxDownloadBox"/><TextBlock Text="{ui:Loc s2a569d7b0881}" Foreground="{StaticResource MutedBrush}" FontSize="10" Margin="0,5,0,0"/></StackPanel>
+          <StackPanel Grid.Column="1" Margin="9,0,0,0"><TextBlock Text="{ui:Loc s0a0cca54362b}" Style="{StaticResource FieldLabel}"/><TextBox x:Name="MaxUploadBox"/><TextBlock Text="{ui:Loc s2a569d7b0881}" Foreground="{StaticResource MutedBrush}" FontSize="10" Margin="0,5,0,0"/></StackPanel>
+        </Grid>
+        <TextBlock Text="{ui:Loc s7d6bdd2c91c0}" Foreground="{StaticResource AccentBrush}" FontSize="10" FontWeight="SemiBold" Margin="0,4,0,13"/>
+        <Grid Margin="0,0,0,16"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition/></Grid.ColumnDefinitions>
+          <StackPanel Margin="0,0,9,0"><TextBlock Text="{ui:Loc s4ec002fa2ae5}" Style="{StaticResource FieldLabel}"/><TextBox x:Name="MaxConcurrentBox"/></StackPanel>
+          <StackPanel Grid.Column="1" Margin="9,0,0,0"><TextBlock Text="{ui:Loc s83ba29e607fc}" Style="{StaticResource FieldLabel}"/><TextBox x:Name="MaxConnectionsBox"/></StackPanel>
+        </Grid>
+        <TextBlock Text="{ui:Loc s86e6368c90a4}" Style="{StaticResource FieldLabel}"/>
+        <TextBox x:Name="ListenPortBox" Margin="0,0,0,12"/>
+        <CheckBox x:Name="EnableDhtBox" Content="{ui:Loc s5d145b9e709d}"/>
+        <CheckBox x:Name="EnableLocalPeersBox" Content="{ui:Loc s643d521eb65c}"/>
+        <CheckBox x:Name="EnablePortForwardingBox" Content="{ui:Loc sdb5ce84249e7}"/>
+        <TextBlock Text="{ui:Loc s2c1a438e559a}" Foreground="{StaticResource AccentBrush}" FontSize="10" FontWeight="SemiBold" Margin="0,18,0,8"/>
+        <TextBlock Text="{ui:Loc sd9396e7d7f04}" Style="{StaticResource FieldLabel}"/><ComboBox x:Name="LanguageBox" SelectedValuePath="Tag" Margin="0,0,0,12"><ComboBoxItem Content="{ui:Loc s5537fc8e69d7}" Tag="ru"/><ComboBoxItem Content="English" Tag="en"/></ComboBox>
+        <TextBlock Text="{ui:Loc UiScale}" Style="{StaticResource FieldLabel}"/>
+        <ComboBox x:Name="ScaleBox" SelectedValuePath="Tag" Margin="0,0,0,12"><ComboBoxItem Content="100% · 1x" Tag="1"/><ComboBoxItem Content="110% · 1.1x" Tag="1.1"/><ComboBoxItem Content="125% · 1.25x" Tag="1.25"/><ComboBoxItem Content="150% · 1.5x" Tag="1.5"/></ComboBox>
+        <UniformGrid Columns="1">
+          <StackPanel Margin="0,0,0,10">
+            <CheckBox x:Name="CloseToTrayBox" Content="{ui:Loc s7ae2d98349b1}" Margin="0,0,0,4"/>
+            <TextBlock Text="{ui:Loc sd84b02432a0f}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="30,0,0,0"/>
+          </StackPanel>
+          <StackPanel Margin="0,0,0,10">
+            <CheckBox x:Name="MinimizeToTrayBox" Content="{ui:Loc s403f2003603d}" Margin="0,0,0,4"/>
+          </StackPanel>
+          <StackPanel Margin="0,0,0,10">
+            <CheckBox x:Name="AdvancedLoggingBox" Content="{ui:Loc AdvancedLogging}" Margin="0,0,0,4"/>
+            <TextBlock Text="{ui:Loc AdvancedLoggingDescription}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="30,0,0,0"/>
+          </StackPanel>
+          <StackPanel Margin="0,0,0,10">
+            <CheckBox x:Name="AutomaticUpdatesBox" Content="{ui:Loc AutomaticUpdates}" Margin="0,0,0,4"/>
+            <TextBlock Text="{ui:Loc AutomaticUpdatesDescription}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap" Margin="30,0,0,0"/>
+          </StackPanel>
+        </UniformGrid>
+        </StackPanel>
+        <StackPanel x:Name="UpdatePanel">
+          <ui:UpdateButton x:Name="UpdateAction" Click="CheckUpdates_Click" HorizontalAlignment="Left"/>
+          <TextBlock x:Name="UpdateDetail" Foreground="{StaticResource MutedBrush}" TextWrapping="Wrap" FontSize="11" Margin="0,6,0,14"/>
+        </StackPanel>
+        <Button x:Name="ProfileFolderButton" Click="ProfileFolder_Click" Background="#151C23" Padding="12" HorizontalContentAlignment="Left"><StackPanel><TextBlock Text="{ui:Loc se9ee09c06418}" Foreground="{StaticResource MutedBrush}" FontSize="11" TextWrapping="Wrap"/><TextBlock x:Name="DataDirectoryLabel" FontSize="10" Foreground="{StaticResource MutedBrush}" TextWrapping="Wrap" Margin="0,5,0,0"/></StackPanel></Button>
+        <Button x:Name="RemoveAppButton" Content="{ui:Loc SelfDestruct}" Click="RemoveApp_Click" Foreground="{StaticResource DangerBrush}" HorizontalAlignment="Left" Margin="0,20,0,4"/>
+      </StackPanel>
+    </ScrollViewer>
+    <TextBlock x:Name="ErrorText" Grid.Row="2" Foreground="{StaticResource DangerBrush}" TextWrapping="Wrap" Margin="0,10,0,0"/>
+    <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+      <Button x:Name="SaveButton" Content="{ui:Loc s4864057d626a}" Click="Save_Click" Style="{StaticResource PrimaryButton}" MinWidth="120" IsDefault="True" Margin="0,0,8,0"/>
+      <Button x:Name="CancelButton" Content="{ui:Loc s0ec753be8df9}" IsCancel="True" MinWidth="100"/>
+    </StackPanel>
+  </Grid>
+</Window>

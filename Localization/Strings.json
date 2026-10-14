@@ -1,0 +1,1442 @@
+{
+  "BrandMigrationAmbiguous": {
+    "Ru": "Найдено несколько прежних профилей. Перенос отменён, чтобы не выбрать неверную очередь.",
+    "En": "More than one previous profile was found. Import was cancelled to avoid choosing the wrong queue."
+  },
+  "BrandMigrationBusy": {
+    "Ru": "Закройте прежнюю версию программы и запустите SneakyFlow снова для переноса очереди.",
+    "En": "Close the previous version and start SneakyFlow again to import your queue."
+  },
+  "s345eb39dd286": {
+    "Ru": "SneakyFlow · ошибка",
+    "En": "SneakyFlow · error"
+  },
+  "s7f7589dcc035": {
+    "Ru": "SneakyFlow · Восстановление очереди…",
+    "En": "SneakyFlow · Restoring transfers…"
+  },
+  "s58cf2214ca99": {
+    "Ru": "Не удалось добавить торрент",
+    "En": "Could not add torrent"
+  },
+  "sd43c0311962d": {
+    "Ru": "Не удалось запустить SneakyFlow.\n\n",
+    "En": "Could not start SneakyFlow.\n\n"
+  },
+  "s7efce00f64fd": {
+    "Ru": "\n\nПапка профиля: ",
+    "En": "\n\nProfile folder: "
+  },
+  "sb235d86c2699": {
+    "Ru": "Настройки, список раздач и журнал: ",
+    "En": "Settings, transfers and logs: "
+  },
+  "s1385837284b5": {
+    "Ru": "Не удалось сохранить размер окна: ",
+    "En": "Could not save window size: "
+  },
+  "sde80c7e22d07": {
+    "Ru": "МБ/с",
+    "En": "MB/s"
+  },
+  "s10a75370e768": {
+    "Ru": "Выполняется операция…",
+    "En": "Working…"
+  },
+  "s05f2973bdfac": {
+    "Ru": "Готов к загрузке · добавьте magnet-ссылку или .torrent-файл",
+    "En": "Ready · add a magnet link or .torrent file"
+  },
+  "sf5c99155176d": {
+    "Ru": "Раздач: {0}",
+    "En": "Torrents: {0}"
+  },
+  "sa8f025c89204": {
+    "Ru": "Не удалось обновить состояние: ",
+    "En": "Could not refresh status: "
+  },
+  "scdf4012ec1dd": {
+    "Ru": "Начните с первого торрента",
+    "En": "Add your first torrent"
+  },
+  "sb35dc252696a": {
+    "Ru": "Перетащите сюда .torrent-файл или добавьте magnet-ссылку.",
+    "En": "Drop a .torrent file here or add a magnet link."
+  },
+  "s103d9e565d9a": {
+    "Ru": "▶  Продолжить",
+    "En": "▶  Resume"
+  },
+  "s2a5774f51267": {
+    "Ru": "Ⅱ  Пауза",
+    "En": "Ⅱ  Pause"
+  },
+  "s545e5a19517f": {
+    "Ru": "Последовательный",
+    "En": "Sequential"
+  },
+  "sa2c84dc5a627": {
+    "Ru": "Обычный",
+    "En": "Normal"
+  },
+  "s8c70ea57ed7d": {
+    "Ru": "Выберите раздачу",
+    "En": "Select a torrent"
+  },
+  "s4fb8a332d839": {
+    "Ru": "Оценка по скорости получения данных; меняется вместе с выбранной раздачей.",
+    "En": "Estimated from data transfer speed for the selected torrent."
+  },
+  "s83ad99df0243": {
+    "Ru": "Не удалось сохранить высоту панели: ",
+    "En": "Could not save panel height: "
+  },
+  "s30cded0f0909": {
+    "Ru": "Добавить торренты",
+    "En": "Add torrents"
+  },
+  "s4f5eb0efd56b": {
+    "Ru": "Торрент-файлы (*.torrent)|*.torrent",
+    "En": "Torrent files (*.torrent)|*.torrent"
+  },
+  "s5e3476023cb4": {
+    "Ru": "Дождитесь добавления текущего торрента.",
+    "En": "Please wait for the current torrent to be added."
+  },
+  "s2e6db6aa092f": {
+    "Ru": "Добавлен: ",
+    "En": "Added: "
+  },
+  "s3b478420e113": {
+    "Ru": "Не удалось изменить состояние",
+    "En": "Could not change transfer state"
+  },
+  "s84a55edd8ae8": {
+    "Ru": "Удаляется…",
+    "En": "Removing…"
+  },
+  "s2700b127a1eb": {
+    "Ru": "Закрываем раздачу и сохраняем данные…",
+    "En": "Closing the transfer and saving data…"
+  },
+  "s9b5d90238ebf": {
+    "Ru": "Торрент убран из библиотеки. Загруженные файлы сохранены.",
+    "En": "Torrent removed. Downloaded files have been kept."
+  },
+  "sde96eb8496ca": {
+    "Ru": "Не удалось убрать торрент",
+    "En": "Could not remove torrent"
+  },
+  "s86ea33aef5e9": {
+    "Ru": "Удалить",
+    "En": "Remove"
+  },
+  "s8a5fd98f48bd": {
+    "Ru": "Настройки сохранены.",
+    "En": "Settings saved."
+  },
+  "sc340410846c3": {
+    "Ru": "Не удалось применить настройки",
+    "En": "Could not apply settings"
+  },
+  "sd764a8420785": {
+    "Ru": "Запрос соединений отправлен. Ответы — во вкладке «Трекеры».",
+    "En": "Connection request sent. See responses in the Trackers tab."
+  },
+  "sc5910bf2b27c": {
+    "Ru": "Не удалось обновить соединения",
+    "En": "Could not refresh connections"
+  },
+  "s156979c7cc68": {
+    "Ru": "Статус: ",
+    "En": "Status: "
+  },
+  "s08291756bd24": {
+    "Ru": "Диагностика: ",
+    "En": "Diagnosis: "
+  },
+  "s3bcc356c1182": {
+    "Ru": "Загружено: {0} / {1} ({2:0.00}%)",
+    "En": "Downloaded: {0} / {1} ({2:0.00}%)"
+  },
+  "sde4b035b378b": {
+    "Ru": "Скорость: ↓ {0}, ↑ {1}",
+    "En": "Speed: ↓ {0}, ↑ {1}"
+  },
+  "s478fa3056378": {
+    "Ru": "неизвестно",
+    "En": "unknown"
+  },
+  "s82b0fd33d3d8": {
+    "Ru": "Сиды: подключено {0}, у трекеров {1}",
+    "En": "Seeds: {0} connected, {1} reported by trackers"
+  },
+  "s257372e78e37": {
+    "Ru": "Пиры: подключено {0}, у трекеров {1}",
+    "En": "Peers: {0} connected, {1} reported by trackers"
+  },
+  "s633d987032b6": {
+    "Ru": "Неудачных подключений за сеанс: {0}",
+    "En": "Failed connections this session: {0}"
+  },
+  "s0ab884485f68": {
+    "Ru": "Сегменты: {0} / {1}; запросов блоков: {2}; ошибок хеша: {3}",
+    "En": "Pieces: {0} / {1}; block requests: {2}; hash failures: {3}"
+  },
+  "s8ca2fbc995a7": {
+    "Ru": "Последние данные: ",
+    "En": "Last data: "
+  },
+  "s72d7c89c25bd": {
+    "Ru": "Трекеры: ",
+    "En": "Trackers: "
+  },
+  "s519ba7f47839": {
+    "Ru": "Трекер",
+    "En": "Tracker"
+  },
+  "s42283a773fb9": {
+    "Ru": "Отчёт скопирован в буфер обмена.",
+    "En": "Report copied to clipboard."
+  },
+  "se4c516c78118": {
+    "Ru": "Не удалось скопировать отчёт",
+    "En": "Could not copy report"
+  },
+  "sf61a763d9369": {
+    "Ru": "Папка появится после начала загрузки.",
+    "En": "The folder will appear when the download starts."
+  },
+  "s40b0437c4427": {
+    "Ru": "Не удалось открыть папку",
+    "En": "Could not open folder"
+  },
+  "se51cebb74b4d": {
+    "Ru": "Не удалось открыть папку данных",
+    "En": "Could not open data folder"
+  },
+  "s3480f88f2048": {
+    "Ru": "Папка для загруженных раздач",
+    "En": "Folder for downloaded torrents"
+  },
+  "sd5c51b302be9": {
+    "Ru": "{0}: введите число от {1} до {2}.",
+    "En": "{0}: enter a number from {1} to {2}."
+  },
+  "sfcc7248fe707": {
+    "Ru": "Укажите папку загрузок.",
+    "En": "Choose a download folder."
+  },
+  "s5456e2f08d57": {
+    "Ru": "Скорость скачивания",
+    "En": "Download speed"
+  },
+  "saf1aef4878b9": {
+    "Ru": "Скорость отдачи",
+    "En": "Upload speed"
+  },
+  "sd2a532f8da39": {
+    "Ru": "Одновременные загрузки",
+    "En": "Simultaneous downloads"
+  },
+  "sd0c4ca8a7aa4": {
+    "Ru": "Соединения",
+    "En": "Connections"
+  },
+  "s84543ec4eecf": {
+    "Ru": "Порт",
+    "En": "Port"
+  },
+  "s7f3527a7d584": {
+    "Ru": "Выбрать торрент-файлы",
+    "En": "Choose torrent files"
+  },
+  "s2d151bafdd9a": {
+    "Ru": "Вставьте magnet-ссылку или выберите .torrent-файл.",
+    "En": "Paste a magnet link or choose a .torrent file."
+  },
+  "s7dbf0a34e771": {
+    "Ru": "Нужна magnet-ссылка или существующий файл с расширением .torrent.",
+    "En": "Enter a magnet link or the path to an existing .torrent file."
+  },
+  "sf127f2a1ee8f": {
+    "Ru": "Понятно",
+    "En": "OK"
+  },
+  "s923f9729007e": {
+    "Ru": "Б",
+    "En": "B"
+  },
+  "sed1bb165c083": {
+    "Ru": "КБ",
+    "En": "KB"
+  },
+  "sd28ac8ed32f9": {
+    "Ru": "МБ",
+    "En": "MB"
+  },
+  "s7335ea74de09": {
+    "Ru": "ГБ",
+    "En": "GB"
+  },
+  "s37531c17355d": {
+    "Ru": "ТБ",
+    "En": "TB"
+  },
+  "sa89e671d0e6b": {
+    "Ru": "{0} МБ/с",
+    "En": "{0} MB/s"
+  },
+  "s01e753ce9108": {
+    "Ru": "Высокий",
+    "En": "High"
+  },
+  "sc37cd2bfe893": {
+    "Ru": "Низкий",
+    "En": "Low"
+  },
+  "s43137e3f1bb2": {
+    "Ru": "Не загружать",
+    "En": "Do not download"
+  },
+  "s73a33f294a52": {
+    "Ru": "Карта появится после получения метаданных торрента.",
+    "En": "The piece map will appear after torrent metadata is received."
+  },
+  "sf9497d500eeb": {
+    "Ru": "загружен и проверен",
+    "En": "downloaded and verified"
+  },
+  "sbf8bc618bd0f": {
+    "Ru": "ещё не загружен",
+    "En": "not downloaded yet"
+  },
+  "sc85ed3ca3dba": {
+    "Ru": "Сегмент {0:N0} / {1:N0}: {2}.",
+    "En": "Piece {0:N0} / {1:N0}: {2}."
+  },
+  "s2af521060a16": {
+    "Ru": "Сегменты {0:N0}–{1:N0} / {2:N0}\nЗагружено и проверено: {3:N0} из {4:N0}.\nОдин прямоугольник объединяет несколько сегментов.",
+    "En": "Pieces {0:N0}–{1:N0} / {2:N0}\nDownloaded and verified: {3:N0} of {4:N0}.\nEach rectangle represents a group of pieces."
+  },
+  "s97d81ecf8f18": {
+    "Ru": "Не удалось прочитать прежнюю очередь SneakyFlow.",
+    "En": "Could not read the previous SneakyFlow queue."
+  },
+  "sbacdfd430a77": {
+    "Ru": "{0:O}\nПрофиль скопирован из {1}.\nИсходный профиль и загруженные файлы сохранены на прежнем месте.\n",
+    "En": "{0:O}\nProfile copied from {1}.\nThe original profile and downloaded files remain in their previous location.\n"
+  },
+  "s1266982501a4": {
+    "Ru": "Запуск SneakyFlow 1.3.0",
+    "En": "Starting SneakyFlow 1.3.0"
+  },
+  "sf5fe3dbeab11": {
+    "Ru": "Не удалось восстановить торрент: {0}",
+    "En": "Could not restore torrent: {0}"
+  },
+  "sd3489349adc0": {
+    "Ru": "Укажите magnet-ссылку или файл .torrent.",
+    "En": "Enter a magnet link or .torrent file."
+  },
+  "sf33b95adec90": {
+    "Ru": "Раздача ожидает свободного места в очереди загрузок",
+    "En": "Waiting for an available download slot"
+  },
+  "s60ac290899c0": {
+    "Ru": "Запрошен повторный поиск пиров: трекеры, DHT и локальная сеть",
+    "En": "Peer discovery requested: trackers, DHT and local network"
+  },
+  "s8e5db3b510af": {
+    "Ru": "Закрываем соединения и сохраняем полученные части. Файлы останутся на диске.",
+    "En": "Closing connections and saving received pieces. Files will be kept."
+  },
+  "sf65a4ab77574": {
+    "Ru": "Очистка кэша: ",
+    "En": "Cache cleanup: "
+  },
+  "se4748b071c04": {
+    "Ru": "Раздача удалена из очереди: {0}; файлы сохранены",
+    "En": "Torrent removed from queue: {0}; files kept"
+  },
+  "sa0c8ed76a0e6": {
+    "Ru": "Включена последовательная загрузка для всех раздач",
+    "En": "Sequential downloading enabled for all torrents"
+  },
+  "sea9c9197a7db": {
+    "Ru": "Включена обычная загрузка для всех раздач",
+    "En": "Normal downloading enabled for all torrents"
+  },
+  "sae9399114e62": {
+    "Ru": "Поддерживаются файлы .torrent и magnet-ссылки.",
+    "En": "Supported sources: .torrent files and magnet links."
+  },
+  "s8a91e06fcba8": {
+    "Ru": "Файл метаданных слишком большой (более 64 МБ).",
+    "En": "The metadata file is too large (over 64 MB)."
+  },
+  "s258074dee8ec": {
+    "Ru": "Этот торрент уже добавлен.",
+    "En": "This torrent has already been added."
+  },
+  "sa5e1eac9d672": {
+    "Ru": "Magnet: добавлены прямые адреса пиров ({0})",
+    "En": "Magnet: direct peer addresses added ({0})"
+  },
+  "sf5ec1e050615": {
+    "Ru": "Не удалось обновить очередь: {0}",
+    "En": "Could not refresh queue: {0}"
+  },
+  "s5bc00c53d9b5": {
+    "Ru": "Состояние: {0}",
+    "En": "State: {0}"
+  },
+  "sac8aba25ff7c": {
+    "Ru": "Не удалось подключиться: {0}:{1} · {2}",
+    "En": "Connection failed: {0}:{1} · {2}"
+  },
+  "s8041157096ef": {
+    "Ru": "Поиск пиров: новых {0}, уже известных {1}",
+    "En": "Peer discovery: {0} new, {1} already known"
+  },
+  "s55a735ef3832": {
+    "Ru": "Пир подключён: {0}:{1} · {2}",
+    "En": "Peer connected: {0}:{1} · {2}"
+  },
+  "sb5649c68d7f1": {
+    "Ru": "Трекер {0}: ответ получен, адресов пиров {1}",
+    "En": "Tracker {0}: response received, {1} peer addresses"
+  },
+  "s75422ec6b72e": {
+    "Ru": "Трекер {0}: {1}",
+    "En": "Tracker {0}: {1}"
+  },
+  "sfba087341b01": {
+    "Ru": "загрузка",
+    "En": "downloading"
+  },
+  "sb2ac8a655d40": {
+    "Ru": "раздача",
+    "En": "seeding"
+  },
+  "s4bda61e26b44": {
+    "Ru": "получение метаданных",
+    "En": "fetching metadata"
+  },
+  "s4dc39d228cf0": {
+    "Ru": "проверка файлов",
+    "En": "checking files"
+  },
+  "s598639f607ee": {
+    "Ru": "запуск",
+    "En": "starting"
+  },
+  "sb159695cc095": {
+    "Ru": "остановка",
+    "En": "stopping"
+  },
+  "s037aac4ca4c0": {
+    "Ru": "остановлен",
+    "En": "stopped"
+  },
+  "s9627af1c25d9": {
+    "Ru": "пауза",
+    "En": "paused"
+  },
+  "sc394f7f85f63": {
+    "Ru": "ошибка",
+    "En": "error"
+  },
+  "s2545babb4189": {
+    "Ru": "Сид",
+    "En": "Seed"
+  },
+  "sc898e2c8efc1": {
+    "Ru": "Пир",
+    "En": "Peer"
+  },
+  "s9c926de356c3": {
+    "Ru": "Нет нужных частей",
+    "En": "No needed pieces"
+  },
+  "s9c4bbbb8361e": {
+    "Ru": "Ждём разрешения (choke)",
+    "En": "Waiting (choked)"
+  },
+  "s8c0980dee6fe": {
+    "Ru": "Передаёт данные",
+    "En": "Sending data"
+  },
+  "s2a5eea3c42f2": {
+    "Ru": "Ожидаем блоки",
+    "En": "Waiting for blocks"
+  },
+  "sc0de888d2487": {
+    "Ru": "Диск (все раздачи): запись {0:0.##} МБ/с · ожидает записи {1:0.##} МБ · чтение {2:0.##} МБ/с",
+    "En": "Disk (all torrents): writing {0:0.##} MB/s · pending {1:0.##} MB · reading {2:0.##} MB/s"
+  },
+  "s434667ef5120": {
+    "Ru": "Получено за сеанс {0:0.##} МБ; прогресс учитывает только проверенные сегменты. Служебный трафик: {1} Б/с.",
+    "En": "Received this session: {0:0.##} MB; progress counts verified pieces only. Protocol traffic: {1} B/s."
+  },
+  "sbf8e0ac7a282": {
+    "Ru": "DHT: повторный запуск, адресов резервных узлов {0}",
+    "En": "DHT: restarting with {0} fallback node addresses"
+  },
+  "sb7fc6b7a1ffe": {
+    "Ru": "DHT: ожидание DNS прервано; повтор доступен через «Обновить соединения»",
+    "En": "DHT: DNS wait cancelled; use Refresh connections to try again"
+  },
+  "s05a9d77ea7fd": {
+    "Ru": "{0}: повторный запрос разрешён через {1}",
+    "En": "{0}: next request allowed in {1}"
+  },
+  "s9221ca07d4ec": {
+    "Ru": "Поиск пиров: превышено время ожидания ответа (25 с); автоматические попытки продолжатся",
+    "En": "Peer discovery: response timed out (25 s); automatic retries will continue"
+  },
+  "s556e6de60627": {
+    "Ru": "Поиск пиров: {0}",
+    "En": "Peer discovery: {0}"
+  },
+  "s398c7d4f7b0d": {
+    "Ru": "Готово",
+    "En": "Complete"
+  },
+  "s59a416ade7bf": {
+    "Ru": "На паузе",
+    "En": "Paused"
+  },
+  "s3effb80812ea": {
+    "Ru": "Данные ещё не поступали в этом сеансе",
+    "En": "No data received this session"
+  },
+  "se230f33316e0": {
+    "Ru": "Данные получены {0} назад",
+    "En": "Data received {0} ago"
+  },
+  "s742711682e34": {
+    "Ru": "Подключено {0}: сидов {1}, пиров {2} · известных адресов {3} · передают {4}",
+    "En": "Connected: {0} ({1} seeds, {2} peers) · known addresses: {3} · sending data: {4}"
+  },
+  "s3e835aa83912": {
+    "Ru": "DHT выключен",
+    "En": "DHT disabled"
+  },
+  "s0d51988382d7": {
+    "Ru": "DHT запрещён приватной раздачей",
+    "En": "DHT disabled for this private torrent"
+  },
+  "se23dc6489588": {
+    "Ru": "работает",
+    "En": "ready"
+  },
+  "s085171a781d7": {
+    "Ru": "подключение к сети",
+    "En": "connecting"
+  },
+  "se68529f98630": {
+    "Ru": "нет ответа; нажмите «Обновить соединения»",
+    "En": "no response; click Refresh connections"
+  },
+  "sf232c85bfa21": {
+    "Ru": "ожидается повтор подключения",
+    "En": "waiting to reconnect"
+  },
+  "s906c884513e5": {
+    "Ru": "DHT: {0} · узлов {1}",
+    "En": "DHT: {0} · nodes: {1}"
+  },
+  "s10ae7653b56e": {
+    "Ru": "автопорт",
+    "En": "automatic port"
+  },
+  "s7ad94e1a6e94": {
+    "Ru": "сопоставлений {0}",
+    "En": "mappings: {0}"
+  },
+  "s0b48cc875658": {
+    "Ru": "выключен",
+    "En": "disabled"
+  },
+  "s3038853116cb": {
+    "Ru": "TCP IPv4{0}: {1} · UPnP/NAT-PMP: {2} · лимит подключений {3}",
+    "En": "TCP IPv4{0}: {1} · UPnP/NAT-PMP: {2} · connection limit: {3}"
+  },
+  "se6156da328e3": {
+    "Ru": "Работает",
+    "En": "Working"
+  },
+  "sba3f82f55b74": {
+    "Ru": "Запрос…",
+    "En": "Requesting…"
+  },
+  "s425e209c997d": {
+    "Ru": "Недоступен",
+    "En": "Unavailable"
+  },
+  "s354414e1dd42": {
+    "Ru": "Ошибка ответа",
+    "En": "Invalid response"
+  },
+  "s5813a9dd15cf": {
+    "Ru": "Ожидание",
+    "En": "Waiting"
+  },
+  "s03498e395a43": {
+    "Ru": "Пауза",
+    "En": "Paused"
+  },
+  "s53755118c8ef": {
+    "Ru": "Ожидается",
+    "En": "Pending"
+  },
+  "safbdc5b24078": {
+    "Ru": "Трекеров нет",
+    "En": "No trackers"
+  },
+  "s6de565b0e4a9": {
+    "Ru": "Трекеры: отвечают {0} из {1}",
+    "En": "Trackers: {0} of {1} responding"
+  },
+  "s150ded916d5b": {
+    "Ru": "Ошибка: {0}. Проверьте доступ к папке и свободное место, затем нажмите «Повторить».",
+    "En": "Error: {0}. Check folder access and free disk space, then retry."
+  },
+  "s5df82c0a4d7e": {
+    "Ru": "Загрузка остановлена пользователем. Нажмите «Продолжить».",
+    "En": "Download paused by the user. Click Resume."
+  },
+  "sa68687fd42cf": {
+    "Ru": "Ожидание очереди: одновременно разрешено загрузок {0}.",
+    "En": "Queued: up to {0} simultaneous downloads allowed."
+  },
+  "s3bc4d1e06c6b": {
+    "Ru": "Проверяем существующие файлы на диске. Сетевое скачивание начнётся после проверки.",
+    "En": "Checking existing files on disk. Downloading will start after the check."
+  },
+  "sf3bf516e09e5": {
+    "Ru": "Все выбранные данные проверены и загружены. Ожидаем запросы других участников раздачи.",
+    "En": "All selected data has been downloaded and verified. Waiting for requests from other peers."
+  },
+  "sd37b85868e08": {
+    "Ru": "Все файлы исключены из загрузки. Выберите хотя бы один файл.",
+    "En": "All files are excluded. Select at least one file to download."
+  },
+  "se324ebe1bbd6": {
+    "Ru": "Очередь записи на диск заполнена: движок ждёт диск. Состояние записи показано в обзоре.",
+    "En": "The disk write queue is full. See disk activity in Overview."
+  },
+  "sb9bd2d29c2a2": {
+    "Ru": "Данные поступают. Запрашиваем части по порядку; пропуски зависят от доступности частей у пиров.",
+    "En": "Receiving data. Requesting pieces in order; gaps depend on availability from peers."
+  },
+  "s1de8b1859d4e": {
+    "Ru": "Данные поступают. Части проверяются и записываются на диск.",
+    "En": "Receiving data. Pieces are being verified and written to disk."
+  },
+  "s3adf6603b111": {
+    "Ru": "Ожидаем метаданные magnet-ссылки. ",
+    "En": "Waiting for magnet metadata. "
+  },
+  "s866c193384aa": {
+    "Ru": "Достигнут общий лимит подключений. Приостановите другую раздачу или увеличьте лимит в настройках.",
+    "En": "The global connection limit has been reached. Pause another torrent or raise the limit in Settings."
+  },
+  "s391542735d24": {
+    "Ru": "Адреса пиров известны ({0}), подключённых нет. Участники могут быть недоступны или отклонять соединение.",
+    "En": "Peer addresses known ({0}), none connected. Peers may be unreachable or rejecting connections."
+  },
+  "s5dfb2bc6dd76": {
+    "Ru": " Неудачных попыток: {0}; последняя причина движка: {1}.",
+    "En": " Failed attempts: {0}; last engine reason: {1}."
+  },
+  "s173af8632b75": {
+    "Ru": " Соединения устанавливаются.",
+    "En": " Establishing connections."
+  },
+  "s0be6f0d08237": {
+    "Ru": "Нет источника пиров: у раздачи нет трекеров, DHT недоступен. Нужен рабочий трекер или magnet с адресом пира.",
+    "En": "No peer source: no trackers and DHT unavailable. A working tracker or magnet with a peer address is required."
+  },
+  "sc7a77cbaa041": {
+    "Ru": "Ни один трекер не отвечает корректно. Причины указаны в списке трекеров; поиск через DHT продолжается, если он доступен.",
+    "En": "No tracker has returned a valid response. See tracker errors; DHT discovery continues when available."
+  },
+  "se0977e602ce2": {
+    "Ru": "Пиров пока нет; DHT ещё не нашёл узлы. Если это длится долго, проверьте интернет, VPN и доступ приложения к UDP в брандмауэре.",
+    "En": "No peers yet; DHT has not found any nodes. If this persists, check your internet, VPN and UDP firewall access."
+  },
+  "s573ab65879cd": {
+    "Ru": "Трекеры и DHT пока не дали доступных пиров. Число сидов на сайте не гарантирует, что они сейчас доступны.",
+    "En": "Trackers and DHT have not returned available peers yet. A website's seed count does not guarantee availability."
+  },
+  "s8c6b14e20b8a": {
+    "Ru": "Подключено {0}; ожидаем ответ пира, который поддерживает передачу метаданных.",
+    "En": "Connected: {0}; waiting for a peer that supports metadata transfer."
+  },
+  "s881cbf199f95": {
+    "Ru": "Подключено {0}, но все пока запрещают передачу (choke). Ожидаем свободного слота у участника.",
+    "En": "Connected: {0}, but all are choking us. Waiting for an upload slot."
+  },
+  "s51d845db6f4c": {
+    "Ru": "У подключённых пиров пока нет нужных недостающих частей. Ищем других участников раздачи.",
+    "En": "Connected peers do not have the missing pieces we need. Looking for other peers."
+  },
+  "s29838517303d": {
+    "Ru": "Запрошено блоков: {0}. Ожидаем данные от пиров; без новых данных {1}.",
+    "En": "Blocks requested: {0}. Waiting for peer data; no new data for {1}."
+  },
+  "se5fb04f53205": {
+    "Ru": "Пиры подключены, но данные пока не поступают. Сидов: {0}; последние события и ответы трекеров показаны ниже.",
+    "En": "Peers connected, but no data yet. Seeds: {0}; recent events and tracker responses are shown below."
+  },
+  "seb9f883201fc": {
+    "Ru": "{0} д {1} ч",
+    "En": "{0} d {1} h"
+  },
+  "s764ddaff0934": {
+    "Ru": "{0} ч {1} мин",
+    "En": "{0} h {1} min"
+  },
+  "sf9b7e626e84d": {
+    "Ru": "{0} мин {1} с",
+    "En": "{0} min {1} s"
+  },
+  "sb32d3d0f9611": {
+    "Ru": "{0} с",
+    "En": "{0} s"
+  },
+  "s93a1f0ad123d": {
+    "Ru": "Получение метаданных",
+    "En": "Fetching metadata"
+  },
+  "s72005dc8b090": {
+    "Ru": "Загружается",
+    "En": "Downloading"
+  },
+  "s30fcdcfa2682": {
+    "Ru": "Раздаётся",
+    "En": "Seeding"
+  },
+  "s926d1e031fb7": {
+    "Ru": "Проверка файлов",
+    "En": "Checking files"
+  },
+  "s72aecd9ad856": {
+    "Ru": "Ошибка",
+    "En": "Error"
+  },
+  "s307429dd8415": {
+    "Ru": "В очереди",
+    "En": "Queued"
+  },
+  "saa0d25d0b349": {
+    "Ru": "Остановлен",
+    "En": "Stopped"
+  },
+  "s3ee535a14ced": {
+    "Ru": "Последовательный режим · ожидаем метаданные",
+    "En": "Sequential mode · waiting for metadata"
+  },
+  "s1f94cbecf92c": {
+    "Ru": "Последовательно · начало готово на {0:0.0}%",
+    "En": "Sequential · continuous prefix {0:0.0}% ready"
+  },
+  "s7c5ff01eb215": {
+    "Ru": "Обычная загрузка",
+    "En": "Normal downloading"
+  },
+  "s28a26e801f29": {
+    "Ru": "Файл настроек повреждён. Его резервная копия сохранена в SneakyFlow.Data; используются стандартные настройки.",
+    "En": "The settings file is damaged. A backup was saved in SneakyFlow.Data; using defaults."
+  },
+  "s8e91bcff70fb": {
+    "Ru": "Лимит скорости должен быть от 0 до 2147,482624 МБ/с.",
+    "En": "The speed limit must be between 0 and 2147.482624 MB/s."
+  },
+  "s7c213ba63cb8": {
+    "Ru": "Число одновременных загрузок должно быть от 1 до 100.",
+    "En": "Simultaneous downloads must be between 1 and 100."
+  },
+  "s9049c94d5e38": {
+    "Ru": "Число подключений должно быть от 1 до 5000.",
+    "En": "Connections must be between 1 and 5,000."
+  },
+  "sa618c0214ce0": {
+    "Ru": "Порт должен быть от 0 до 65535.",
+    "En": "Port must be between 0 and 65,535."
+  },
+  "s14e37fa7e4c4": {
+    "Ru": "Торрент содержит небезопасный путь к файлу.",
+    "En": "The torrent contains an unsafe file path."
+  },
+  "sacc04030b691": {
+    "Ru": "Торрент содержит небезопасное имя папки.",
+    "En": "The torrent contains an unsafe folder name."
+  },
+  "s4d60005354e6": {
+    "Ru": "Путь файла торрента выходит за папку загрузок.",
+    "En": "A torrent file path is outside the download folder."
+  },
+  "sd9c92b5dd8af": {
+    "Ru": "Торрент уже удалён.",
+    "En": "This torrent has already been removed."
+  },
+  "sf679c233c6c2": {
+    "Ru": "Файл не принадлежит этому торренту.",
+    "En": "The file does not belong to this torrent."
+  },
+  "s4419617ccbcb": {
+    "Ru": "Сначала инициализируйте торрент-клиент.",
+    "En": "Initialize the torrent client first."
+  },
+  "sce33334e2d2b": {
+    "Ru": "Не удалось сохранить сеанс: {0}",
+    "En": "Could not save session: {0}"
+  },
+  "sc4aac21f2e3c": {
+    "Ru": "Не удалось корректно остановить «{0}»: {1}",
+    "En": "Could not stop “{0}” cleanly: {1}"
+  },
+  "sc7cb415f1641": {
+    "Ru": "Не удалось сохранить сеанс после остановки: {0}",
+    "En": "Could not save session after stopping: {0}"
+  },
+  "se3d6a0d0a2b0": {
+    "Ru": "Не найден встроенный значок программы.",
+    "En": "The embedded application icon was not found."
+  },
+  "sc688d312fa39": {
+    "Ru": "Открыть SneakyFlow",
+    "En": "Open SneakyFlow"
+  },
+  "seded67ba31a4": {
+    "Ru": "Выход — завершить загрузки",
+    "En": "Exit — stop transfers"
+  },
+  "s993bbd6df31d": {
+    "Ru": "SneakyFlow · загрузок: {0}\n↓ {1}   ↑ {2}",
+    "En": "SneakyFlow · downloads: {0}\n↓ {1}   ↑ {2}"
+  },
+  "s6e01361384e0": {
+    "Ru": "SneakyFlow работает в трее",
+    "En": "SneakyFlow is running in the tray"
+  },
+  "sec75a1873737": {
+    "Ru": "Загрузки продолжаются. Нажмите значок, чтобы открыть окно; «Выход» в его меню завершит программу.",
+    "En": "Downloads continue. Click the icon to open the window; choose Exit from its menu to quit."
+  },
+  "sf840866a138f": {
+    "Ru": "Получение метаданных…",
+    "En": "Fetching metadata…"
+  },
+  "s5c6b738dd03c": {
+    "Ru": "Ожидание запуска",
+    "En": "Waiting to start"
+  },
+  "s4faa82f560ee": {
+    "Ru": "Свернуть",
+    "En": "Minimize"
+  },
+  "s7f2418737221": {
+    "Ru": "Развернуть / восстановить",
+    "En": "Maximize / restore"
+  },
+  "s55dc9ba82402": {
+    "Ru": "Закрыть окно (поведение в настройках)",
+    "En": "Close window (see behavior in Settings)"
+  },
+  "s97d02f8d1251": {
+    "Ru": "＋  Добавить торрент",
+    "En": "＋  Add torrent"
+  },
+  "s1785c5476e30": {
+    "Ru": "Открыть .torrent",
+    "En": "Open .torrent"
+  },
+  "sf9174ab335a1": {
+    "Ru": "ЗАГРУЗКА",
+    "En": "DOWNLOAD"
+  },
+  "sd609ed6a3304": {
+    "Ru": "ОТДАЧА",
+    "En": "UPLOAD"
+  },
+  "sb73b07922795": {
+    "Ru": "ОБЪЁМ РАЗДАЧИ",
+    "En": "TORRENT SIZE"
+  },
+  "s6f3f71f1c0c9": {
+    "Ru": "ДО КОНЦА ЗАГРУЗКИ",
+    "En": "TIME REMAINING"
+  },
+  "s54724fec4ffc": {
+    "Ru": "Открыть папку",
+    "En": "Open folder"
+  },
+  "s71171f1c6592": {
+    "Ru": "Убрать торрент из списка; загруженные файлы сохранятся",
+    "En": "Remove torrent from the list; downloaded files are kept"
+  },
+  "s7a40da77c2be": {
+    "Ru": "ИМЯ / ПРОГРЕСС",
+    "En": "NAME / PROGRESS"
+  },
+  "s0342f5816cf9": {
+    "Ru": "СИДЫ / ПИРЫ",
+    "En": "SEEDS / PEERS"
+  },
+  "sf01ee519129a": {
+    "Ru": "Подключённые сиды / подключённые пиры без полного файла",
+    "En": "Connected seeds / connected peers without a complete copy"
+  },
+  "saa37b88e0421": {
+    "Ru": "подключено",
+    "En": "connected"
+  },
+  "sa2d2c4050a64": {
+    "Ru": "СВЕДЕНИЯ О РАЗДАЧЕ",
+    "En": "TORRENT DETAILS"
+  },
+  "s03adbaec7cd9": {
+    "Ru": "Обновить соединения",
+    "En": "Refresh connections"
+  },
+  "sdb98fcea1b20": {
+    "Ru": "Повторно запросить пиры у трекеров; возобновить торрент, если он остановлен",
+    "En": "Request peers from trackers again; resume the torrent if stopped"
+  },
+  "sb838a7f56822": {
+    "Ru": "Копировать отчёт",
+    "En": "Copy report"
+  },
+  "s5166becd4fcd": {
+    "Ru": "СЕГМЕНТЫ   ",
+    "En": "PIECES   "
+  },
+  "sd733b97d58af": {
+    "Ru": "■  Проверено",
+    "En": "■  Verified"
+  },
+  "sab55c04c02d0": {
+    "Ru": "■  Частично в группе",
+    "En": "■  Partly complete group"
+  },
+  "sac92e4923c87": {
+    "Ru": "■  Не загружено",
+    "En": "■  Missing"
+  },
+  "s655a4f19fddc": {
+    "Ru": "Запросов блоков: ",
+    "En": "Block requests: "
+  },
+  "s39c63872060e": {
+    "Ru": "Обзор",
+    "En": "Overview"
+  },
+  "s4f41ba24bff4": {
+    "Ru": "Проверено / размер",
+    "En": "Verified / size"
+  },
+  "s95189b583cdb": {
+    "Ru": "Скорость загрузки",
+    "En": "Download speed"
+  },
+  "se2b175a0a171": {
+    "Ru": "Осталось / время",
+    "En": "Remaining / time"
+  },
+  "s6f0a34fc733e": {
+    "Ru": "Добавлен",
+    "En": "Added"
+  },
+  "sa9c649d0b93a": {
+    "Ru": "Отдано / рейтинг",
+    "En": "Uploaded / ratio"
+  },
+  "sc41c371df392": {
+    "Ru": "Время в работе",
+    "En": "Elapsed time"
+  },
+  "s405cf854f8a3": {
+    "Ru": "Последние данные",
+    "En": "Last data"
+  },
+  "s8f9794c7146b": {
+    "Ru": "Сиды: подключено / у трекеров",
+    "En": "Seeds: connected / tracker"
+  },
+  "s3346f31786c1": {
+    "Ru": "Сид — участник с полной копией. Данные трекеров могут быть устаревшими; «—» означает, что трекеры не сообщили число.",
+    "En": "A seed has a complete copy. Tracker counts may be outdated; “—” means the count was not reported."
+  },
+  "sc6b285990bc1": {
+    "Ru": "Пиры: подключено / у трекеров",
+    "En": "Peers: connected / tracker"
+  },
+  "s4e77701441c7": {
+    "Ru": "Здесь пиры — участники без полной копии. Число трекеров не гарантирует возможность соединения.",
+    "En": "Peers here have incomplete copies. Tracker counts do not guarantee connectivity."
+  },
+  "s9fc81cccc4a4": {
+    "Ru": "Адресов известно движку",
+    "En": "Known peer addresses"
+  },
+  "s09d9204a1174": {
+    "Ru": "Известные движку адреса для соединения; это не общее число участников во всём интернете.",
+    "En": "Addresses known to the engine, not the total number of participants on the internet."
+  },
+  "s96540c9366e4": {
+    "Ru": "Передают / удерживают отдачу",
+    "En": "Sending data / choking"
+  },
+  "s881eb4857664": {
+    "Ru": "Сегментов доступно у пиров",
+    "En": "Pieces available from peers"
+  },
+  "sb8b6a8296812": {
+    "Ru": "Ошибок проверки хеша",
+    "En": "Hash failures"
+  },
+  "s3cb13e858953": {
+    "Ru": "Порядок загрузки",
+    "En": "Download order"
+  },
+  "sd0554145726f": {
+    "Ru": "Папка загрузки",
+    "En": "Download folder"
+  },
+  "s15c28af73224": {
+    "Ru": "Инфохеш",
+    "En": "Info hash"
+  },
+  "s978f0033be4e": {
+    "Ru": "Пиры",
+    "En": "Peers"
+  },
+  "s38c332f0bd34": {
+    "Ru": "Скорость — МБ/с (1 МБ = 1 000 000 байт). Choke: участник пока не разрешил передачу.",
+    "En": "Speed: MB/s (1 MB = 1,000,000 bytes). Choke: the peer has not granted an upload slot yet."
+  },
+  "s8db46ea789a5": {
+    "Ru": "Адрес",
+    "En": "Address"
+  },
+  "s190a9bec3866": {
+    "Ru": "Клиент",
+    "En": "Client"
+  },
+  "sd25691ca401e": {
+    "Ru": "Тип",
+    "En": "Type"
+  },
+  "s81e4bb361c4a": {
+    "Ru": "Состояние",
+    "En": "State"
+  },
+  "sc98fa825d60a": {
+    "Ru": "Загрузка",
+    "En": "Download"
+  },
+  "s62e8deb1de82": {
+    "Ru": "Отдача",
+    "En": "Upload"
+  },
+  "s76dd8ec92a26": {
+    "Ru": "Запросы",
+    "En": "Requests"
+  },
+  "sb767bdde6b10": {
+    "Ru": "Трекеры",
+    "En": "Trackers"
+  },
+  "sf439b06af4ef": {
+    "Ru": "Ответ: ",
+    "En": "Response: "
+  },
+  "s3da35b706ff9": {
+    "Ru": "Обновление: ",
+    "En": "Update: "
+  },
+  "s67ade741ae18": {
+    "Ru": "Журнал",
+    "En": "Log"
+  },
+  "s4b26b02d56a4": {
+    "Ru": "Готов к загрузке",
+    "En": "Ready to download"
+  },
+  "sea9d35e7fe87": {
+    "Ru": "⚙  Настройки",
+    "En": "⚙  Settings"
+  },
+  "s9b8f6059340b": {
+    "Ru": "●  Данные в AppData",
+    "En": "●  Data in AppData"
+  },
+  "s5969f8188593": {
+    "Ru": "Открыть папку данных программы",
+    "En": "Open application data folder"
+  },
+  "s5aef72f899ca": {
+    "Ru": "Настройки SneakyFlow",
+    "En": "SneakyFlow settings"
+  },
+  "s7f17c7c62a7f": {
+    "Ru": "Настройки",
+    "En": "Settings"
+  },
+  "se580c2de50a3": {
+    "Ru": "ЗАГРУЗКИ",
+    "En": "DOWNLOADS"
+  },
+  "s53aeedb2ec9a": {
+    "Ru": "Папка для новых раздач",
+    "En": "Folder for new torrents"
+  },
+  "s2aa9ee6d1fea": {
+    "Ru": "Полный путь к папке загрузок",
+    "En": "Full path to the download folder"
+  },
+  "s6279ddde818c": {
+    "Ru": "Выбрать…",
+    "En": "Browse…"
+  },
+  "s0d96cadb9587": {
+    "Ru": "Уже добавленные раздачи сохраняют свою папку.",
+    "En": "Existing torrents keep their current folders."
+  },
+  "s770eb66a4244": {
+    "Ru": "Последовательная загрузка — для всех раздач",
+    "En": "Sequential downloading — for all torrents"
+  },
+  "s213edcab876b": {
+    "Ru": "Сегменты запрашиваются по порядку, с начала файла. Применяется к текущим и новым раздачам. Видео можно открыть в своём плеере; возможность просмотра зависит от формата и наличия начальных сегментов.",
+    "En": "Pieces are requested in order from the start of the file. Applies to existing and new torrents. Open video in your own player; playback depends on the format and availability of the first pieces."
+  },
+  "s89774e4cbe6f": {
+    "Ru": "Сразу запускать добавленные торренты",
+    "En": "Start newly added torrents immediately"
+  },
+  "scb9ad6e126c5": {
+    "Ru": "Лимит загрузки, МБ/с",
+    "En": "Download limit, MB/s"
+  },
+  "s2a569d7b0881": {
+    "Ru": "0 — без ограничения",
+    "En": "0 — unlimited"
+  },
+  "s0a0cca54362b": {
+    "Ru": "Лимит отдачи, МБ/с",
+    "En": "Upload limit, MB/s"
+  },
+  "s7d6bdd2c91c0": {
+    "Ru": "СЕТЬ",
+    "En": "NETWORK"
+  },
+  "s4ec002fa2ae5": {
+    "Ru": "Одновременных загрузок (1–100)",
+    "En": "Simultaneous downloads (1–100)"
+  },
+  "s83ba29e607fc": {
+    "Ru": "Максимум соединений (1–5000)",
+    "En": "Connection limit (1–5000)"
+  },
+  "s86e6368c90a4": {
+    "Ru": "Порт прослушивания (0 — автоматически)",
+    "En": "Listening port (0 — automatic)"
+  },
+  "s5d145b9e709d": {
+    "Ru": "DHT — искать пиры без трекера",
+    "En": "DHT — discover peers without trackers"
+  },
+  "s643d521eb65c": {
+    "Ru": "Находить пиры в локальной сети",
+    "En": "Discover peers on the local network"
+  },
+  "sdb5ce84249e7": {
+    "Ru": "Автоматически открывать порт на роутере (UPnP / NAT-PMP)",
+    "En": "Automatically forward router ports (UPnP / NAT-PMP)"
+  },
+  "s2c1a438e559a": {
+    "Ru": "ПРИЛОЖЕНИЕ",
+    "En": "APPLICATION"
+  },
+  "sd9396e7d7f04": {
+    "Ru": "Язык интерфейса",
+    "En": "Interface language"
+  },
+  "s5537fc8e69d7": {
+    "Ru": "Русский",
+    "En": "Русский"
+  },
+  "s7ae2d98349b1": {
+    "Ru": "При закрытии окна оставлять загрузки в трее",
+    "En": "Keep transfers running in the tray when closing"
+  },
+  "s403f2003603d": {
+    "Ru": "При сворачивании убирать окно в трей",
+    "En": "Hide the window in the tray when minimizing"
+  },
+  "sd84b02432a0f": {
+    "Ru": "Для полного выхода выберите «Выход» в меню значка в трее.",
+    "En": "To quit completely, choose Exit from the tray icon menu."
+  },
+  "se9ee09c06418": {
+    "Ru": "Настройки и список раздач хранятся в профиле Windows.",
+    "En": "Settings and transfers are stored in your Windows profile."
+  },
+  "s0ec753be8df9": {
+    "Ru": "Отмена",
+    "En": "Cancel"
+  },
+  "s4864057d626a": {
+    "Ru": "Сохранить",
+    "En": "Save"
+  },
+  "sa337bf4b270e": {
+    "Ru": "Добавить торрент — SneakyFlow",
+    "En": "Add torrent — SneakyFlow"
+  },
+  "s5952c4499c0e": {
+    "Ru": "Добавить торрент",
+    "En": "Add torrent"
+  },
+  "scec62b0021d6": {
+    "Ru": "MAGNET-ССЫЛКА ИЛИ ПУТЬ К ФАЙЛУ",
+    "En": "MAGNET LINK OR FILE PATH"
+  },
+  "sf4ae2c92d5d2": {
+    "Ru": "Несколько ссылок — по одной на строке.",
+    "En": "Multiple links: one per line."
+  },
+  "s8cdc51667a92": {
+    "Ru": "Выбрать файл…",
+    "En": "Choose file…"
+  },
+  "s559a87f7cc13": {
+    "Ru": "Добавить",
+    "En": "Add"
+  },
+  "clockUnits": {
+    "En": "h:min:s",
+    "Ru": "ч:мин:с"
+  },
+  "About": {
+    "Ru": "О программе",
+    "En": "About"
+  },
+  "UiScale": {
+    "Ru": "Масштаб интерфейса",
+    "En": "Interface scale"
+  },
+  "RowSeedsPeers": {
+    "Ru": "сиды / пиры",
+    "En": "seeds / peers"
+  },
+  "Exit": {
+    "Ru": "Выход",
+    "En": "Exit"
+  },
+  "RateLimitError": {
+    "Ru": "{0}: введите скорость от 0 до 2147,482624 МБ/с.",
+    "En": "{0}: enter a speed between 0 and 2147.482624 MB/s."
+  },
+  "AboutDescription": {
+    "Ru": "Портативный BitTorrent-клиент. Последовательная загрузка для просмотра файлов во внешнем плеере. Движок: MonoTorrent 3.0.3 (rev0049).",
+    "En": "A portable BitTorrent client. Sequential downloading for playback in your own media player. Engine: MonoTorrent 3.0.3 (rev0049)."
+  },
+  "AboutTermsTitle": {
+    "Ru": "Условия использования",
+    "En": "Terms of use"
+  },
+  "AboutTerms": {
+    "Ru": "Использование программы означает согласие с этим соглашением. До явного принятия текущей версии соглашения интерфейс загрузок и торрент-движок недоступны. Отказ от соглашения или отзыв принятия запускает без дополнительного подтверждения безвозвратное удаление программы, известных запущенных копий и данных её профиля; скачанные файлы вне профиля сохраняются. Закрытие окна соглашения не является принятием. Изменение версии соглашения требует нового принятия.\n\nПравообладатель предоставляет безвозмездное, неисключительное разрешение использовать, воспроизводить, копировать, изменять и передавать собственный код SneakyFlow и его сборки исключительно в некоммерческих целях. Передача копии не означает передачу исключительных прав на программу.\n\nПродажа программы или её модификаций, предоставление платного доступа к ним и взимание платы за копии запрещены. При передаче исходного кода, сборок или производных версий необходимо сохранять эти условия и имеющиеся уведомления об авторских правах. Изменённые версии следует обозначать как модифицированные; нельзя приписывать их изменения авторам исходной версии.\n\nПрограмма предоставляется «как есть» и «по мере доступности», без явных или подразумеваемых гарантий, включая гарантии пригодности для конкретной цели, бесперебойной работы и сохранности данных. В пределах, допускаемых применимым законодательством, правообладатель не несёт ответственности за прямой или косвенный ущерб, упущенную выгоду и потерю данных, возникшие в связи с использованием программы. Эти положения не ограничивают права и ответственность, которые нельзя ограничить законом.\n\nПользователь самостоятельно отвечает за соблюдение применимого законодательства и прав третьих лиц при загрузке и распространении материалов. Эти условия не предоставляют никаких прав на содержимое раздач. SneakyFlow не является правообладателем передаваемых пользователями материалов.\n\nУсловия выше относятся только к собственному коду SneakyFlow. MonoTorrent, Mono.Nat, ReusableTasks, .NET и другие сторонние компоненты распространяются по своим лицензиям. Их лицензионные разрешения, включая разрешения на коммерческое использование там, где они предоставлены, сохраняются и этими условиями не ограничиваются. Уведомления и тексты лицензий сторонних компонентов включены в поставку.",
+    "En": "Using the program signifies agreement to these terms. The transfer interface and torrent engine remain unavailable until the current terms are explicitly accepted. Declining or withdrawing acceptance permanently removes the program, known previously launched copies and its profile data without an additional confirmation; downloads outside the profile are retained. Closing the agreement window does not constitute acceptance. A change to the agreement version requires renewed acceptance.\n\nThe copyright holder grants a free, non-exclusive permission to use, reproduce, copy, modify and share SneakyFlow's own code and builds solely for noncommercial purposes. Providing a copy does not transfer ownership of the intellectual property in the software.\n\nSelling the program or modified versions, charging for access or charging for copies is prohibited. Redistribution of source code, builds or derivative versions must retain these terms and existing copyright notices. Modified versions should be identified as modified; their changes must not be attributed to the original authors.\n\nThe software is provided as is and as available, without express or implied warranties, including fitness for a particular purpose, uninterrupted operation or preservation of data. To the extent permitted by applicable law, the copyright holder is not liable for direct or indirect damage, lost profits or loss of data arising from use of the software. These provisions do not restrict rights or liabilities that cannot be restricted by law.\n\nUsers are responsible for complying with applicable law and third-party rights when downloading and sharing material. These terms grant no rights to torrent content. SneakyFlow does not hold the rights to material transferred by its users.\n\nThe terms above apply only to SneakyFlow's own code. MonoTorrent, Mono.Nat, ReusableTasks, .NET and other third-party components are distributed under their respective licenses. Their permissions, including commercial use where granted, remain unaffected by these terms. Third-party notices and license texts are included in the distribution."
+  },
+  "AboutLicenses": {
+    "Ru": "Лицензии компонентов",
+    "En": "Component licenses"
+  },
+  "AboutVersion": {
+    "Ru": "Версия {0} · Windows x64",
+    "En": "Version {0} · Windows x64"
+  },
+  "Close": {
+    "Ru": "Закрыть",
+    "En": "Close"
+  },
+  "AdvancedLogging": {
+    "Ru": "Расширенный журнал",
+    "En": "Advanced diagnostics"
+  },
+  "AdvancedLoggingDescription": {
+    "Ru": "Показывает вкладки «Пиры», «Трекеры» и «Журнал» и записывает подробные события. По умолчанию выключен.",
+    "En": "Shows Peers, Trackers and Log tabs and records detailed events. Off by default."
+  },
+  "AutomaticUpdates": {
+    "Ru": "Проверять и устанавливать обновления автоматически",
+    "En": "Check for and install updates automatically"
+  },
+  "AutomaticUpdatesDescription": {
+    "Ru": "Только официальные GitHub Releases, с проверкой SHA-256.",
+    "En": "Official GitHub Releases only, verified with SHA-256."
+  },
+  "CheckUpdates": {
+    "Ru": "Проверить обновления сейчас",
+    "En": "Check for updates now"
+  },
+  "SelfDestruct": {
+    "Ru": "САМОУНИЧТОЖЕНИЕ",
+    "En": "SELF-DESTRUCT"
+  },
+  "RemovalDisclosure": {
+    "Ru": "Отклонение соглашения или снятие отметки о принятии запускает удаление SneakyFlow, известных копий и данных профиля без корзины.",
+    "En": "Declining or withdrawing acceptance permanently removes SneakyFlow, its known copies and profile data."
+  },
+  "AgreementAccepted": {
+    "Ru": "Соглашение принято",
+    "En": "Agreement accepted"
+  },
+  "UpdateChecking": {
+    "Ru": "Проверка обновления",
+    "En": "Checking for updates"
+  },
+  "UpdateVerifying": {
+    "Ru": "Проверка файла",
+    "En": "Verifying download"
+  },
+  "UpdateWaiting": {
+    "Ru": "Ожидание установки",
+    "En": "Waiting to install"
+  },
+  "UpdateInstalling": {
+    "Ru": "Установка",
+    "En": "Installing"
+  },
+  "UpdateLatest": {
+    "Ru": "Установлена последняя версия",
+    "En": "You are up to date"
+  },
+  "UpdateCompleted": {
+    "Ru": "Обновление установлено",
+    "En": "Update installed"
+  },
+  "UpdateRetry": {
+    "Ru": "Повторить проверку",
+    "En": "Try again"
+  },
+  "UpdateUnavailable": {
+    "Ru": "Проверка обновлений недоступна.",
+    "En": "Update checking is unavailable."
+  },
+  "UpdateRestarting": {
+    "Ru": "Сохраняем очередь и перезапускаем программу…",
+    "En": "Saving transfers and restarting…"
+  },
+  "UpdateCloseDialogs": {
+    "Ru": "Закройте другие диалоги, чтобы продолжить установку.",
+    "En": "Close other dialogs to continue installation."
+  },
+  "Accept": {
+    "Ru": "Принять",
+    "En": "Accept"
+  },
+  "DeclineRemove": {
+    "Ru": "Отклонить и удалить",
+    "En": "Decline and uninstall"
+  },
+  "LicenseVersion": {
+    "Ru": "Версия соглашения: ",
+    "En": "Agreement version: "
+  },
+  "RemovalTitle": {
+    "Ru": "Удалить раздачу",
+    "En": "Remove torrent"
+  },
+  "RemovalFiles": {
+    "Ru": "Удалить скачанные файлы без корзины",
+    "En": "Permanently delete downloaded files too"
+  },
+  "RemovalKeep": {
+    "Ru": "Только раздачу из SneakyFlow · файлы останутся",
+    "En": "Only remove from SneakyFlow · keep downloaded files"
+  },
+  "RemovalYes": {
+    "Ru": "Да, удалить программу",
+    "En": "Yes, uninstall"
+  },
+  "RemovalQuestion": {
+    "Ru": "Программа, её известные запущенные копии и данные профиля будут удалены навсегда, без корзины. Скачанные файлы вне профиля останутся. Продолжить?",
+    "En": "The program, its known previously launched copies and profile data will be permanently deleted. Downloads outside the profile will be kept. Continue?"
+  },
+  "RemovalDone": {
+    "Ru": "Раздача удалена. Удаление файлов завершено.",
+    "En": "Torrent removed. File deletion finished."
+  },
+  "RemovalShared": {
+    "Ru": "Эти файлы используются другой раздачей. Сначала удалите только раздачу.",
+    "En": "Another torrent uses these files. Remove the torrent without deleting its files first."
+  },
+  "RemovalFailedFiles": {
+    "Ru": "Раздача удалена, но некоторые файлы удалить не удалось: ",
+    "En": "Torrent removed, but some files could not be deleted: "
+  },
+  "RemovedEntry": {
+    "Ru": "Раздача удалена: {0}",
+    "En": "Torrent removed: {0}"
+  },
+  "Recovery": {
+    "Ru": "Движок перестал запрашивать сегменты. Выполнено ограниченное восстановление запросов без разрыва соединений.",
+    "En": "The engine stopped requesting pieces. A bounded request recovery was performed without disconnecting peers."
+  },
+  "NoTrackersSimple": {
+    "Ru": "Ни один трекер не отвечает корректно. Поиск через DHT продолжается, если он доступен.",
+    "En": "No tracker is responding correctly. DHT discovery continues if available."
+  },
+  "NoDataSimple": {
+    "Ru": "Пиры подключены, но данные пока не поступают. Сидов: {0}.",
+    "En": "Peers are connected but no data is arriving. Seeds: {0}."
+  },
+  "DiscoverySent": {
+    "Ru": "Запрос соединений отправлен.",
+    "En": "Discovery request sent."
+  },
+  "UpdateChecking": {
+    "Ru": "Проверяем обновления…",
+    "En": "Checking for updates…"
+  },
+  "UpdateLatest": {
+    "Ru": "Новых официальных выпусков пока нет.",
+    "En": "No newer official releases are available."
+  },
+  "UpdateDownload": {
+    "Ru": "Загружаем и проверяем обновление…",
+    "En": "Downloading and verifying the update…"
+  },
+  "UpdateRestart": {
+    "Ru": "Обновление проверено. Сохраняем очередь и перезапускаем SneakyFlow…",
+    "En": "Update verified. Saving the queue and restarting SneakyFlow…"
+  },
+  "UpdateError": {
+    "Ru": "Не удалось обновить SneakyFlow",
+    "En": "Could not update SneakyFlow"
+  },
+  "RemoveError": {
+    "Ru": "Не удалось завершить самоудаление",
+    "En": "Could not finish self-removal"
+  },
+  "ClosingTransfer": {
+    "Ru": "Закрываем раздачу…",
+    "En": "Closing the torrent…"
+  },
+  "MaintenanceBusy": {
+    "Ru": "SneakyFlow завершает обновление или удаление. Повторите запуск позже.",
+    "En": "SneakyFlow is finishing an update or removal. Please try again later."
+  },
+  "EngineSlow": {
+    "Ru": "Движок долго отвечает на запрос состояния. Интерфейс доступен; повторные операции не запускаются до завершения текущей.",
+    "En": "The engine is taking a long time to report its state. The interface remains available; overlapping operations will not be started."
+  }
+}

@@ -1,0 +1,34 @@
+<Window x:Class="SneakyFlow.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:SneakyFlow.UI"
+        Style="{StaticResource AppWindowStyle}" Title="{ui:Loc About}"
+        Width="670" Height="680" MinWidth="540" MinHeight="420"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+  <Grid Margin="22">
+    <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+    <StackPanel Margin="0,0,0,22">
+      <TextBlock FontSize="28" FontWeight="SemiBold"><Run Text="sneaky"/><Run Text="flow" Foreground="{StaticResource AccentBrush}"/></TextBlock>
+      <TextBlock x:Name="VersionText" Foreground="{StaticResource MutedBrush}" Margin="0,7,0,0"/>
+    </StackPanel>
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+      <StackPanel Margin="0,0,12,0">
+        <TextBlock Text="{ui:Loc AboutDescription}" TextWrapping="Wrap" LineHeight="20"/>
+        <Border Height="1" Background="{StaticResource StrokeBrush}" Margin="0,20"/>
+        <TextBlock Text="{ui:Loc AboutTermsTitle}" FontWeight="SemiBold" Margin="0,0,0,12"/>
+        <TextBlock Text="{ui:Loc AboutTerms}" TextWrapping="Wrap" LineHeight="20" Foreground="{StaticResource MutedBrush}"/>
+        <Button Content="{ui:Loc AboutLicenses}" Click="Licenses_Click" HorizontalAlignment="Left" Margin="0,18,0,4" Padding="12,8"/>
+      </StackPanel>
+    </ScrollViewer>
+    <StackPanel Grid.Row="2" Margin="0,18,0,0">
+      <TextBlock x:Name="LicenseVersionText" Foreground="{StaticResource MutedBrush}" Margin="0,0,0,8"/>
+      <TextBlock Text="{ui:Loc RemovalDisclosure}" TextWrapping="Wrap" Foreground="{StaticResource MutedBrush}" FontSize="11" Margin="0,0,0,10"/>
+      <CheckBox x:Name="AcceptedBox" Content="{ui:Loc AgreementAccepted}" Unchecked="Accepted_Unchecked" Margin="0,0,0,12"/>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+        <Button x:Name="AcceptButton" Content="{ui:Loc Accept}" Click="Accept_Click" Style="{StaticResource PrimaryButton}" MinWidth="110" Margin="0,0,8,0"/>
+        <Button x:Name="DeclineButton" Content="{ui:Loc DeclineRemove}" Click="Decline_Click" MinWidth="150"/>
+        <Button x:Name="CloseButton" Content="{ui:Loc Close}" Click="Close_Click" IsCancel="True" MinWidth="100"/>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</Window>

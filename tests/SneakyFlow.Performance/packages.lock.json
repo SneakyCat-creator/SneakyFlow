@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "MonoTorrent": {
+        "type": "Direct",
+        "requested": "[3.0.3-alpha.unstable.rev0049, )",
+        "resolved": "3.0.3-alpha.unstable.rev0049",
+        "contentHash": "iaqVZgfgfSPrOsBavX1Mgwt8MToO/vtVigJJxLjOl33IOImuFZOEJPpkNv7+ELq0Gq86h4/38E+2DR8CD+LhKA==",
+        "dependencies": {
+          "Mono.Nat": "3.0.0",
+          "ReusableTasks": "4.0.0"
+        }
+      },
+      "Mono.Nat": {
+        "type": "Transitive",
+        "resolved": "3.0.0",
+        "contentHash": "LgRC8/8plJfvr1nCPmyHNIwP4fs346doMA/UVDZvFN0RfGJdyD2uS7Dl1AydxjVLrIvad8ghozI0vYFWcfPeYQ=="
+      },
+      "ReusableTasks": {
+        "type": "Transitive",
+        "resolved": "4.0.0",
+        "contentHash": "6EKzscjq+Q+uxD0N5GWUBO2N34cuDiJ08ZxRs1lqS0Hwvnjp6AgimUIX/8dqIxRZbPOG4gcikTMo+PM4D9CfaQ=="
+      }
+    }
+  }
+}

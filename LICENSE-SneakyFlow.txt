@@ -1,0 +1,29 @@
+License version: 2026-10-14.1
+
+SneakyFlow — условия некоммерческого использования
+
+Использование программы означает согласие с этим соглашением. До явного принятия текущей версии соглашения интерфейс загрузок и торрент-движок недоступны. Отказ от соглашения или отзыв принятия запускает без дополнительного подтверждения безвозвратное удаление программы, известных запущенных копий и данных её профиля; скачанные файлы вне профиля сохраняются. Закрытие окна соглашения не является принятием. Изменение версии соглашения требует нового принятия.
+
+Правообладатель предоставляет безвозмездное, неисключительное разрешение использовать, воспроизводить, копировать, изменять и передавать собственный код SneakyFlow и его сборки исключительно в некоммерческих целях. Передача копии не означает передачу исключительных прав на программу.
+
+Продажа программы или её модификаций, предоставление платного доступа к ним и взимание платы за копии запрещены. При передаче исходного кода, сборок или производных версий необходимо сохранять эти условия и имеющиеся уведомления об авторских правах. Изменённые версии следует обозначать как модифицированные; нельзя приписывать их изменения авторам исходной версии.
+
+Программа предоставляется «как есть» и «по мере доступности», без явных или подразумеваемых гарантий, включая гарантии пригодности для конкретной цели, бесперебойной работы и сохранности данных. В пределах, допускаемых применимым законодательством, правообладатель не несёт ответственности за прямой или косвенный ущерб, упущенную выгоду и потерю данных, возникшие в связи с использованием программы. Эти положения не ограничивают права и ответственность, которые нельзя ограничить законом.
+
+Пользователь самостоятельно отвечает за соблюдение применимого законодательства и прав третьих лиц при загрузке и распространении материалов. Эти условия не предоставляют никаких прав на содержимое раздач. SneakyFlow не является правообладателем передаваемых пользователями материалов.
+
+Условия выше относятся только к собственному коду SneakyFlow. MonoTorrent, Mono.Nat, ReusableTasks, .NET и другие сторонние компоненты распространяются по своим лицензиям. Их лицензионные разрешения, включая разрешения на коммерческое использование там, где они предоставлены, сохраняются и этими условиями не ограничиваются. Уведомления и тексты лицензий сторонних компонентов включены в поставку.
+
+SneakyFlow — noncommercial use terms
+
+Using the program signifies agreement to these terms. The transfer interface and torrent engine remain unavailable until the current terms are explicitly accepted. Declining or withdrawing acceptance permanently removes the program, known previously launched copies and its profile data without an additional confirmation; downloads outside the profile are retained. Closing the agreement window does not constitute acceptance. A change to the agreement version requires renewed acceptance.
+
+The copyright holder grants a free, non-exclusive permission to use, reproduce, copy, modify and share SneakyFlow's own code and builds solely for noncommercial purposes. Providing a copy does not transfer ownership of the intellectual property in the software.
+
+Selling the program or modified versions, charging for access or charging for copies is prohibited. Redistribution of source code, builds or derivative versions must retain these terms and existing copyright notices. Modified versions should be identified as modified; their changes must not be attributed to the original authors.
+
+The software is provided as is and as available, without express or implied warranties, including fitness for a particular purpose, uninterrupted operation or preservation of data. To the extent permitted by applicable law, the copyright holder is not liable for direct or indirect damage, lost profits or loss of data arising from use of the software. These provisions do not restrict rights or liabilities that cannot be restricted by law.
+
+Users are responsible for complying with applicable law and third-party rights when downloading and sharing material. These terms grant no rights to torrent content. SneakyFlow does not hold the rights to material transferred by its users.
+
+The terms above apply only to SneakyFlow's own code. MonoTorrent, Mono.Nat, ReusableTasks, .NET and other third-party components are distributed under their respective licenses. Their permissions, including commercial use where granted, remain unaffected by these terms. Third-party notices and license texts are included in the distribution.

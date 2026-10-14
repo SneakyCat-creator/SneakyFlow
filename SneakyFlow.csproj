@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>SneakyFlow</AssemblyName>
+    <RootNamespace>SneakyFlow</RootNamespace>
+    <Version>1.6.0</Version>
+    <LicenseVersion>2026-10-14.1</LicenseVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Assets\SneakyFlow.ico</ApplicationIcon>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PlatformTarget>x64</PlatformTarget>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <!-- Keep the complete runtime. Only the application's two UI languages are needed. -->
+    <SatelliteResourceLanguages>ru;en</SatelliteResourceLanguages>
+    <DebugType>embedded</DebugType>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <NuGetAudit>true</NuGetAudit>
+    <DefaultItemExcludes>$(DefaultItemExcludes);artifacts\**;.packages\**;.dotnet\**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="SneakyFlow.UiSmoke" />
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+    <EmbeddedResource Include="Assets\SneakyFlow.ico" />
+    <EmbeddedResource Include="Localization\Strings.json" LogicalName="SneakyFlow.Strings.json" />
+    <EmbeddedResource Include="LICENSE-SneakyFlow.txt" LogicalName="SneakyFlow.License.txt" />
+    <EmbeddedResource Include="Services\SelfRemove.ps1" LogicalName="SneakyFlow.SelfRemove.ps1" />
+    <PackageReference Include="MonoTorrent" Version="3.0.3-alpha.unstable.rev0049" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="tests\**;tools\**" />
+    <Page Remove="tests\**;tools\**" />
+    <None Remove="tests\**;tools\**" />
+    <Content Include="THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="LICENSE-SneakyFlow.txt" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="licenses\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
